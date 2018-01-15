@@ -51,7 +51,7 @@ In following example, responder reacts to first interaction in Choose Machine bo
 
 As mentioned above, moving between cells in conversation is mainly managed through quick replies.
 
-#### Quick reply
+### Quick reply
 
 User see quick reply as button with suggested question.
 Each quick reply consists of text (max. 20 characters) and name of cell to which it redirects.
