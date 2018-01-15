@@ -1,0 +1,26 @@
+{
+  "name": "wingbot-docs",
+  "version": "1.0.0",
+  "description": "Wingbot docs",
+  "scripts": {
+    "doc": "gitbook install ./doc && gitbook build ./doc && rm -rf ./docs && mv ./doc/_book ./docs && printf docs.wingbot.ai >> ./docs/CNAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wingbotai/docs.git"
+  },
+  "keywords": [
+    "Wingbot",
+    "Docs"
+  ],
+  "author": "Wingbot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wingbotai/docs/issues"
+  },
+  "homepage": "https://github.com/wingbotai/docs#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "jsdoc-to-markdown": "^3.0.4"
+  }
+}

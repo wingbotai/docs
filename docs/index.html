@@ -1,0 +1,266 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting Started · Wingbot.ai</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Wingbot.ai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Using a Wingbot</li>
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Getting Started</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wingbotai-docs"><a name="wingbotai-docs" class="plugin-anchor" href="#wingbotai-docs"><i class="fa fa-link" aria-hidden="true"></i></a>Wingbot.ai Docs</h1>
+<p>Purpose of this document is to provide information about basic principles of building bot in Wingbot tool.
+Each major section of the document is supplemented by example from current version of the Saeco bot.
+Thie Wingbot includes comparatively more conversation building tools and features, to other interfaces. This enables us to do some more sophisticated features, like maintaining a status information about user (does like / does not like milk) throughout the conversation.</p>
+<h2 id="bot-structure"><a name="bot-structure" class="plugin-anchor" href="#bot-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Bot structure</h2>
+<p>Bot structure is divided into various building blocks. Each block represents mostly self-containt parts of conversation with specific goal. For example, one building block is about finding the right coffee machine, another is conversation about Saeco and yet another is conversation about product ranges.
+User position between blocks is very fluid, as they can switch between the blocks based on their questions. Such switch is serviced by function called callback (will be discussed further below).</p>
+<h3 id="building-block-structure"><a name="building-block-structure" class="plugin-anchor" href="#building-block-structure"><i class="fa fa-link" aria-hidden="true"></i></a>Building block structure</h3>
+<p>Each block has one entry point and possibly multiple exit points. Conversation itself is then further divided into building block cells.</p>
+<h3 id="building-block-cells"><a name="building-block-cells" class="plugin-anchor" href="#building-block-cells"><i class="fa fa-link" aria-hidden="true"></i></a>Building block cells</h3>
+<ul>
+<li>Building block cells are the smalles parts of conversation between bot and user. Each building block maps small interaction - usually it is answer to user question and then providing means to continue in conversations, for example by quick reply suggestions.</li>
+<li>Every cell must have unique name (for example &quot;Choose Temperature&quot;) that is used as refference for navigation between cells</li>
+</ul>
+<p>Bot utilizes 2 types of building block cells.</p>
+<h4 id="interaction"><a name="interaction" class="plugin-anchor" href="#interaction"><i class="fa fa-link" aria-hidden="true"></i></a>Interaction</h4>
+<p>Interaction represents one message exchange (=question &amp; answer) between user and bot. Each interaction starts with bot reply to previous user action, can include more than one message and even a media files. Interaction ends by transfering user to another interaction (via quick reply or Go To feature) or by transfering user to different part of the bot.</p>
+<h4 id="responder"><a name="responder" class="plugin-anchor" href="#responder"><i class="fa fa-link" aria-hidden="true"></i></a>Responder</h4>
+<p>Responder reacts to predefined intents. Consists of name, intent and selected action to this intent.</p>
+<p>Building block cells can have following types of content:</p>
+<ul>
+<li>Message - this is message show by bot to the user. When it is not stated otherwise, it is possible to stack multiple messages on top of each other</li>
+<li>Media - images, video, etc.</li>
+<li>Exit - name of bot building block to which should user continue after this interaction</li>
+<li>Go To - redirect user directly to different part of current building block</li>
+<li>Plugin - custom part of code, each plugin has different function and is provided by Pragonauts tailored for each bot</li>
+</ul>
+<p>Moving between cells in conversation is mainly managed through quick replies.</p>
+<h4 id="quick-reply"><a name="quick-reply" class="plugin-anchor" href="#quick-reply"><i class="fa fa-link" aria-hidden="true"></i></a>Quick reply</h4>
+<p>User see quick reply as button with suggested question.
+Each quick reply consists of text (max. 20 characters) and name of cell to which it redirects.</p>
+<h3 id="callback"><a name="callback" class="plugin-anchor" href="#callback"><i class="fa fa-link" aria-hidden="true"></i></a>Callback</h3>
+<p>Callbacks in general are instructions for each cell on how to interact with users that come to that cell from different parts ofthe bot flow. Different in this case means that they do not come from direct link from quick reply in previous cell.</p>
+<h2 id="user-intents"><a name="user-intents" class="plugin-anchor" href="#user-intents"><i class="fa fa-link" aria-hidden="true"></i></a>User intents</h2>
+<p>User intents are actionable intents that is bot capable to recognise.</p>
+<ul>
+<li>Each intent can have great number of example texts - bot uses these texts for intent recognition. Bot recognition isn&apos;t however limited just to these texts, with growing body of texts grows bot&apos;s capability to recognise texts with similar meaning that are not directly included in intent example texts.</li>
+<li>Every intent can be paired to exactly one block cell</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Getting Started","level":"1.1","depth":1,"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"README.md","mtime":"2018-01-15T15:19:26.533Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-15T15:26:33.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
