@@ -9,25 +9,17 @@ Thie Wingbot includes comparatively more conversation building tools and feature
 Bot structure is divided into various building blocks. Each block represents mostly self-containt parts of conversation with specific goal. For example, one building block is about finding the right coffee machine, another is conversation about Saeco and yet another is conversation about product ranges.
 User position between blocks is very fluid, as they can switch between the blocks based on their questions. Such switch is serviced by function called callback (will be discussed further below).
 
+**Saeco bot structure**
+/img/bot_structure
+
 ### Building block structure
 
 Each block has one entry point and possibly multiple exit points. Conversation itself is then further divided into building block cells.
 
 ### Building block cells
 
-* Building block cells are the smalles parts of conversation between bot and user. Each building block maps small interaction - usually it is answer to user question and then providing means to continue in conversations, for example by quick reply suggestions.
-* Every cell must have unique name (for example "Choose Temperature") that is used as refference for navigation between cells
-
-Bot utilizes 2 types of building block cells.
-
-#### Interaction
-
-Interaction represents one message exchange (=question & answer) between user and bot. Each interaction starts with bot reply to previous user action, can include more than one message and even a media files. Interaction ends by transfering user to another interaction (via quick reply or Go To feature) or by transfering user to different part of the bot.
-
-#### Responder
-
-Responder reacts to predefined intents. Consists of name, intent and selected action to this intent.
-
+Building block cells are the smalles parts of conversation between bot and user. Each building block maps small interaction, usually it is answer to user question and then providing means to continue in conversations, for example by quick reply suggestions.
+Every cell must have unique name (for example "Choose Temperature") that is used as refference for navigation between cells
 
 Building block cells can have following types of content:
 
@@ -37,12 +29,37 @@ Building block cells can have following types of content:
 * Go To - redirect user directly to different part of current building block
 * Plugin - custom part of code, each plugin has different function and is provided by Pragonauts tailored for each bot
 
-Moving between cells in conversation is mainly managed through quick replies.
+Bot utilizes 2 types of building block cells.
+
+#### Interaction
+
+Interaction represents one message exchange (=question & answer) between user and bot. Each interaction starts with bot reply to previous user action, can include more than one message and even a media files. Interaction ends by transfering user to another interaction (via quick reply or Go To feature) or by transfering user to different part of the bot.
+
+In following example, interaction is built as reaction to user question "Is Pluto a planet?". Statement "Is Pluto a planet?" is not part of the interaction, the interaction merely reacts to this statement.
+
+**Interaction example - Pluto**
+/img/interaction_example
+
+#### Responder
+
+Responder reacts to predefined intents. Responder consists of refference to which interaction it reacts, intent and selected response.
+
+In following example, responder reacts to first interaction in Choose Machine bot branch. When user types in "design" instead of clicking on quick reply button, this responder is triggered and redirects user to "Design" interaction itself.
+
+**Responder example - design**
+/img/responder_example
+
+As mentioned above, moving between cells in conversation is mainly managed through quick replies.
 
 #### Quick reply
 
 User see quick reply as button with suggested question.
 Each quick reply consists of text (max. 20 characters) and name of cell to which it redirects.
+
+When the total number of characters is exceeded, like on example below, the Quick reply device turns yellow
+
+**Quick reply example - exceeded number of characters**
+/img/quick_reply
 
 ### Callback
 
@@ -55,7 +72,11 @@ User intents are actionable intents that is bot capable to recognise.
 * Each intent can have great number of example texts - bot uses these texts for intent recognition. Bot recognition isn't however limited just to these texts, with growing body of texts grows bot's capability to recognise texts with similar meaning that are not directly included in intent example texts.
 * Every intent can be paired to exactly one block cell
 
+**Intents can be edited either via separate interface in intents section...**
+/img/intents_section
 
+**...or directly in interaction to which they are linked**
+/img/intents_interaction
 
 
 
