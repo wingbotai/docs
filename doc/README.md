@@ -28,6 +28,8 @@ Every cell must have unique name (for example "Choose Temperature") that is used
 
 Building block cells can have following types of content:
 
+![alt text](https://github.com/wingbotai/docs/blob/master/doc/content.png)
+
 * Message - this is message show by bot to the user. When it is not stated otherwise, it is possible to stack multiple messages on top of each other
 * Media - images, video, etc.
 * Exit - name of bot building block to which should user continue after this interaction
