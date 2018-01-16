@@ -1,7 +1,9 @@
 # Wingbot.ai Docs
 
 Purpose of this document is to provide information about basic principles of building bot in Wingbot tool.
+
 Each major section of the document is supplemented by example from current version of the Saeco bot.
+
 Thie Wingbot includes comparatively more conversation building tools and features, to other interfaces. This enables us to do some more sophisticated features, like maintaining a status information about user (does like / does not like milk) throughout the conversation.
 
 ## Bot structure
