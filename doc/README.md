@@ -11,7 +11,7 @@ User position between blocks is very fluid, as they can switch between the block
 
 **Saeco bot structure**
 
-![alt text]https://github.com/wingbotai/docs/blob/master/doc/bot_structure.png
+![alt text](https://github.com/wingbotai/docs/blob/master/doc/bot_structure.png)
 
 ### Building block structure
 
