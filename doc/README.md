@@ -50,7 +50,7 @@ In following example, responder reacts to first interaction in Choose Machine bo
 
 
 
-**Building block cells can have following types of content:**
+### Building block cells can have following types of content:
 
 ![alt text](https://github.com/wingbotai/docs/blob/master/doc/content.png)
 
