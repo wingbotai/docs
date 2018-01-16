@@ -26,17 +26,7 @@ Building block cells are the smalles parts of conversation between bot and user.
 
 Every cell must have unique name (for example "Choose Temperature") that is used as refference for navigation between cells
 
-Building block cells can have following types of content:
-
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/content.png)
-
-* Message - this is message show by bot to the user. When it is not stated otherwise, it is possible to stack multiple messages on top of each other
-* Media - images, video, etc.
-* Exit - name of bot building block to which should user continue after this interaction
-* Go To - redirect user directly to different part of current building block
-* Plugin - custom part of code, each plugin has different function and is provided by Pragonauts tailored for each bot
-
-Bot utilizes 2 types of building block cells.
+**Bot utilizes 2 types of building block cells.**
 
 #### Interaction
 
@@ -55,6 +45,16 @@ In following example, responder reacts to first interaction in Choose Machine bo
 
 **Responder example - design**
 ![alt text](https://github.com/wingbotai/docs/blob/master/doc/responder_example.png)
+
+**Building block cells can have following types of content:**
+
+![alt text](https://github.com/wingbotai/docs/blob/master/doc/content.png)
+
+* Message - this is message show by bot to the user. When it is not stated otherwise, it is possible to stack multiple messages on top of each other
+* Media - images, video, etc.
+* Exit - name of bot building block to which should user continue after this interaction
+* Go To - redirect user directly to different part of current building block
+* Plugin - custom part of code, each plugin has different function and is provided by Pragonauts tailored for each bot
 
 As mentioned above, moving between cells in conversation is mainly managed through quick replies.
 
