@@ -10,7 +10,8 @@ Bot structure is divided into various building blocks. Each block represents mos
 User position between blocks is very fluid, as they can switch between the blocks based on their questions. Such switch is serviced by function called callback (will be discussed further below).
 
 **Saeco bot structure**
-![alt text]https://github.com/wingbotai/docs/doc/bot_structure.png
+
+![alt text]https://github.com/wingbotai/docs/blob/master/doc/bot_structure.png
 
 ### Building block structure
 
