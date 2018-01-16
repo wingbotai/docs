@@ -74,7 +74,7 @@ When the total number of characters is exceeded, like on example below, the Quic
 
 ### Callback
 
-Callbacks in general are instructions for each cell on how to interact with users that come to that cell from different parts ofthe bot flow. Different in this case means that they do not come from direct link from quick reply in previous cell.
+Final part of building block cells are callbacks. Callbacks in general are instructions for each cell on how to interact with users that come to that cell from different parts ofthe bot flow. Different in this case means that they do not come from direct link from quick reply in previous cell. Each callback is provided by Pragonauts as plugin and their programming is in scope of the project.
 
 ## User intents
 
