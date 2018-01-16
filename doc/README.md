@@ -14,7 +14,7 @@ User movement between blocks is very fluid, as they can switch between the block
 
 **Saeco bot structure**
 
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/bot_structure.png)
+![alt text](./bot_structure.png)
 
 ### Building block structure
 
@@ -37,7 +37,7 @@ Interaction represents one message exchange (=question & answer) between user an
 In following example, interaction is built as reaction to user question "Is Pluto a planet?". Statement "Is Pluto a planet?" is not part of the interaction, the interaction merely reacts to this statement.
 
 **Interaction example - Pluto**
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/interaction_example.png)
+![alt text](./interaction_example.png)
 
 #### Responder
 
@@ -46,13 +46,14 @@ Responder reacts to predefined intents. Responder consists of refference to whic
 In following example, responder reacts to first interaction in Choose Machine bot branch. When user types in "design" instead of clicking on quick reply button, this responder is triggered and redirects user to "Design" interaction itself.
 
 **Responder example - design**
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/responder_example.png)
+
+![alt text](./responder_example.png)
 
 
 
 ### Building block cells can have following types of content:
 
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/content.png)
+![alt text](./content.png)
 
 * Message - this is message show by bot to the user. When it is not stated otherwise, it is possible to stack multiple messages on top of each other
 * Media - images, video, etc.
@@ -70,7 +71,8 @@ Each quick reply consists of text (max. 20 characters) and name of cell to which
 When the total number of characters is exceeded, like on example below, the Quick reply device turns yellow
 
 **Quick reply example - exceeded number of characters**
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/quick_reply.png)
+
+![alt text](./quick_reply.png)
 
 ### Callback
 
@@ -84,10 +86,12 @@ User intents are actionable intents that is bot capable to recognise.
 * Every intent can be paired to exactly one block cell
 
 **Intents can be edited either via separate interface in intents section...**
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/intents_section.png)
+
+![alt text](./intents_section.png)
 
 **...or directly in interaction to which they are linked**
-![alt text](https://github.com/wingbotai/docs/blob/master/doc/intents_interaction.png)
+
+![alt text](./intents_interaction.png)
 
 
 
