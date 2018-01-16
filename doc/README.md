@@ -26,6 +26,8 @@ Building block cells are the smalles parts of conversation between bot and user.
 
 Every cell must have unique name (for example "Choose Temperature") that is used as refference for navigation between cells
 
+
+
 **Bot utilizes 2 types of building block cells.**
 
 #### Interaction
@@ -45,6 +47,8 @@ In following example, responder reacts to first interaction in Choose Machine bo
 
 **Responder example - design**
 ![alt text](https://github.com/wingbotai/docs/blob/master/doc/responder_example.png)
+
+
 
 **Building block cells can have following types of content:**
 
