@@ -9,6 +9,7 @@ Thie Wingbot includes comparatively more conversation building tools and feature
 ## Bot structure
 
 Bot structure is divided into various building blocks. Each block represents mostly self-containt parts of conversation with specific goal. For example, one building block is about finding the right coffee machine, another is conversation about Saeco and yet another is conversation about product ranges.
+
 User position between blocks is very fluid, as they can switch between the blocks based on their questions. Such switch is serviced by function called callback (will be discussed further below).
 
 **Saeco bot structure**
@@ -22,6 +23,7 @@ Each block has one entry point and possibly multiple exit points. Conversation i
 ### Building block cells
 
 Building block cells are the smalles parts of conversation between bot and user. Each building block maps small interaction, usually it is answer to user question and then providing means to continue in conversations, for example by quick reply suggestions.
+
 Every cell must have unique name (for example "Choose Temperature") that is used as refference for navigation between cells
 
 Building block cells can have following types of content:
