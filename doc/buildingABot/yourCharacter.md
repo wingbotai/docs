@@ -16,6 +16,8 @@ Defining bot character has two important parts:
   + what are the tragic flaws of bot
   + is bot friendly and how easily can get upset
 
+  <br />
+
 - **2. Bots visual style**
 
   Visual style is very important part of character. It includes:
@@ -24,5 +26,7 @@ Defining bot character has two important parts:
   + images and videos sent during conversation
   + visual style of bot's menu
   + visual style of bot's templates (Carousels, Lists, etc.)
+
+   <br />
 
   ![bot visual](../visuals.png)

@@ -1,0 +1,362 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Building a simple conversation · Wingbot.ai</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Wingbot.ai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="advandedConversationTree.html" />
+    
+    
+    <link rel="prev" href="rulesAndTerms.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Using a Wingbot</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Building a bot</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="yourCharacter.html">
+            
+                <a href="yourCharacter.html">
+            
+                    
+                    Bot's character
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="rulesAndTerms.html">
+            
+                <a href="rulesAndTerms.html">
+            
+                    
+                    Design rules and terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="simpleConversation.html">
+            
+                <a href="simpleConversation.html">
+            
+                    
+                    Building a simple conversation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="advandedConversationTree.html">
+            
+                <a href="advandedConversationTree.html">
+            
+                    
+                    Advanced conversation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Building a simple conversation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="building-a-simple-conversation"><a name="building-a-simple-conversation" class="plugin-anchor" href="#building-a-simple-conversation"><i class="fa fa-link" aria-hidden="true"></i></a>Building a simple conversation</h1>
+<h2 id="starting-interaction-and-fallback"><a name="starting-interaction-and-fallback" class="plugin-anchor" href="#starting-interaction-and-fallback"><i class="fa fa-link" aria-hidden="true"></i></a>Starting Interaction and fallback</h2>
+<p>  Everything starts in <strong>Root block</strong>.</p>
+<ol>
+<li><p><strong>Respond to &quot;get started&quot; button</strong></p>
+<p>This is one of &quot;hard coded&quot; interactions. Action name is generated from Interaction name - <strong>so it&apos;s important to not change names of theese interactions</strong></p>
+<ul>
+<li>create an interaction and name it &quot;Start&quot;</li>
+<li>create a Message Response with text &quot;Welcome there&quot;</li>
+</ul>
+</li>
+<li><p><strong>Response to unexpected user behavior - Fallback (*)</strong></p>
+<p>At the end of Root block, there should be an interaction with <strong>Asterisk - *</strong>. This will intercept all user actions, which are not matched by previous interactions.</p>
+<p>It&apos;s good to make few response message alternatives, which are randomly picked.</p>
+<ul>
+<li>Create an interaction named &quot;Fallback&quot;.</li>
+<li>Enable the <strong>Asterisk *</strong> button beside the interaction name.</li>
+<li>To make &quot;randomized&quot; response, add &quot;Message&quot; Reaction and under the drop-down arrow beside message text, press &quot;Add random text&quot;.</li>
+</ul>
+<p><img src="getStarted.png" alt="simple conversation"></p>
+</li>
+</ol>
+<h2 id="be-able-to-react-to-text-messages"><a name="be-able-to-react-to-text-messages" class="plugin-anchor" href="#be-able-to-react-to-text-messages"><i class="fa fa-link" aria-hidden="true"></i></a>Be able to react to text messages</h2>
+<p>  When user writes &quot;hello&quot;, respond with &quot;Hi!&quot;</p>
+<ol>
+<li>Create new interaction, and move it <strong>above all Fallback (*)</strong> interactions</li>
+<li>Name the interaction - it&apos;s good for other collaborators and for analytics</li>
+<li><p>Press the &quot;keyboard button&quot; beside the Interaction name and write down example User messages - <strong>Intents</strong></p>
+<blockquote>
+<p>Examples are case insensitive, no interpunction needed, only words are important. The more examples you make, the better recognition will be.</p>
+</blockquote>
+</li>
+<li><p>Make a Message Response</p>
+<p><img src="helloResponse.png" alt="hello response example"></p>
+</li>
+</ol>
+<h2 id="lead-the-conversation-with-quick-replies"><a name="lead-the-conversation-with-quick-replies" class="plugin-anchor" href="#lead-the-conversation-with-quick-replies"><i class="fa fa-link" aria-hidden="true"></i></a>Lead the conversation with quick replies</h2>
+<p>  Let&apos;s make an Interaction, which explains bots origin.</p>
+<ol>
+<li><p><strong>Create the quick reply</strong></p>
+<ul>
+<li>Find the starting interaction.</li>
+<li>At the most bottom text Response click the &quot;add quick reply suggestion&quot; button.</li>
+<li>Set the text of quick reply.</li>
+<li>Write down the action name and click on &quot;New interaction: Where are you from&quot;.</li>
+</ul>
+<p><img src="quickReply.png" alt="how to make a quick reply"></p>
+<ul>
+<li>The new interaction will be created at the end of &quot;Root Block&quot;.</li>
+</ul>
+</li>
+<li><p><strong>Set up the newly created interaction</strong></p>
+<ul>
+<li>Move it <strong>above all Fallback (*)</strong> interactions.</li>
+<li>Make a Message Response</li>
+</ul>
+</li>
+<li><p><strong>Make your new Interaction accessible also with text message</strong></p>
+<ul>
+<li>Press the &quot;keyboard button&quot; beside the Interaction name and write down example User messages - <strong>Intents</strong></li>
+</ul>
+<p><img src="ai.png" alt="how to make a quick reply"></p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rulesAndTerms.html" class="navigation navigation-prev " aria-label="Previous page: Design rules and terms">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="advandedConversationTree.html" class="navigation navigation-next " aria-label="Next page: Advanced conversation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Building a simple conversation","level":"2.3","depth":1,"next":{"title":"Advanced conversation","level":"2.4","depth":1,"path":"buildingABot/advandedConversationTree.md","ref":"buildingABot/advandedConversationTree.md","articles":[]},"previous":{"title":"Design rules and terms","level":"2.2","depth":1,"path":"buildingABot/rulesAndTerms.md","ref":"buildingABot/rulesAndTerms.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/simpleConversation.md","mtime":"2018-02-05T11:52:08.009Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T12:19:55.497Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
