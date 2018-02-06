@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Advanced conversation · Wingbot.ai</title>
+        <title>Advanced conversation (structured) · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="simpleConversation.html" />
+    <link rel="prev" href="smalltalk.html" />
     
 
     </head>
@@ -152,12 +152,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="advandedConversationTree.html">
+        <li class="chapter " data-level="2.4" data-path="smalltalk.html">
+            
+                <a href="smalltalk.html">
+            
+                    
+                    Smalltalk conversation (freeform)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="advandedConversationTree.html">
             
                 <a href="advandedConversationTree.html">
             
                     
-                    Advanced conversation
+                    Advanced conversation (structured)
             
                 </a>
             
@@ -195,7 +208,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Advanced conversation</a>
+        <a href=".." >Advanced conversation (structured)</a>
     </h1>
 </div>
 
@@ -254,7 +267,80 @@
 </ul>
 <p><img src="interconnect.png" alt="coffee size"></p>
 </li>
+<li><p><strong>Create the exit interaction - &quot;Finished&quot;</strong></p>
+<ul>
+<li>call it &quot;Finished&quot;</li>
+<li>put a new Exit Block into the interaction and call it &quot;User leaved&quot;</li>
+</ul>
+<p><img src="exitPoint.png" alt="exit point"></p>
+</li>
+<li><p><strong>Fill the &quot;Small coffee&quot; and the &quot;Large coffee&quot; interactions</strong></p>
+<ul>
+<li>insert texts, which will be conditionally shown (three for each card)</li>
+<li>insert &quot;Is it ok?&quot; call to action with &quot;Ok&quot; quick reply leading to newly created &quot;Finished&quot; Interaction</li>
+<li>point &quot;Ok&quot; quick reply to &quot;Finished&quot; interaction with previously defined exit point.</li>
+<li>now, messages will be sent sequientially - it&apos;s required to let developer set conditions</li>
+</ul>
+<p><img src="solutionInteractions.png" alt="exit point"></p>
+</li>
+<li><p><strong>FOR DEVELOPERS: set responses to state</strong></p>
+<ul>
+<li>there are three interactions within the state has to be set: &quot;Without milk&quot;, &quot;Frothed milk chosen&quot; and &quot;Just milk chosen&quot;</li>
+<li>put a &quot;snippet&quot; in each of theese interaction</li>
+<li>decribe a snippet as much as descriptive: &quot;set withMilk to conversation state&quot;</li>
+<li>fill the snippet with following code</li>
+</ul>
+<pre><code class="lang-javascript">(req, res, postBack) =&gt; {
+   res.setState({ withMilk: <span class="hljs-literal">false</span>, frothedMilk: <span class="hljs-literal">false</span> });
+   <span class="hljs-keyword">return</span> Router.CONTINUE;
+}
+</code></pre>
+<p><img src="setStates.png" alt="set state"></p>
+</li>
+<li><p><strong>FOR DEVELOPERS: set up conditions for messages</strong></p>
+<ul>
+<li>each message can be conditionally shown or hidden</li>
+<li>to enable condition, use carret beside the message box to show a &quot;has condition&quot;</li>
+<li>use this snippet as condition</li>
+</ul>
+<pre><code class="lang-javascript">(req, res) =&gt; {
+   <span class="hljs-keyword">return</span> !req.state.withMilk &amp;&amp; !req.state.frothedMilk;
+}
+</code></pre>
+<p><img src="messageConditions.png" alt="set state"></p>
+</li>
+<li><p><strong>Create an alternative response &quot;No coffee at all&quot;</strong></p>
+<p>When users are asked, whether they prefer milk or not and responses they do not like coffee.</p>
+<ul>
+<li>make a new interaction and drag it below the &quot;Choose Coffee entry point&quot; - it&apos;s better to keep interactions organised</li>
+<li>toggle the switch to <strong>Responder</strong></li>
+<li>choose &quot;Choose Coffee entry point&quot; as <strong>Reaction to</strong></li>
+<li>click the &quot;Keyboard&quot; button and write examples of user&apos;s message: &quot;do not like coffe&quot;, e.t.c.</li>
+<li>insert a Message interaction and point &quot;ok&quot; answer to &quot;Finished&quot; interaction</li>
+</ul>
+<p><img src="responderInteraction.png" alt="set state"></p>
+</li>
+<li><p><strong>Include the &quot;Choose coffee&quot; conversation tree in the Root Block</strong></p>
+<ul>
+<li>go to &quot;Root block&quot; at the bot&apos;s homepage</li>
+<li>create a new interaction and move it before &quot;Fallback&quot;, when there is one</li>
+<li>name it &quot;Choose coffee&quot; for example</li>
+<li>insert an &quot;Include&quot; block into the interaction and choose &quot;Choose coffee&quot; subtree</li>
+<li>now you can configure exit point &quot;User leaved&quot;</li>
+<li>for example, send a message and redirect user to &quot;Start&quot;</li>
+</ul>
+<p><img src="includeBlock.png" alt="set state"></p>
+</li>
+<li><p><strong>Make interaction accessible by AI &amp; from Start</strong></p>
+<ul>
+<li>now you can make a new Quick reply at start and point it to &quot;Choose coffee&quot; interaction</li>
+<li>you can also use Keyboard button and create the new intent by filling example texts like &quot;choose me a coffee&quot;</li>
+</ul>
+<p><img src="makeCoffeeAccessible.png" alt="set state"></p>
+</li>
 </ol>
+<h2 id="how-it-works"><a name="how-it-works" class="plugin-anchor" href="#how-it-works"><i class="fa fa-link" aria-hidden="true"></i></a>How it works?</h2>
+<p><img src="chooseCoffee.png" alt="set state"></p>
 
                                 
                                 </section>
@@ -282,7 +368,7 @@
 
             
                 
-                <a href="simpleConversation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Building a simple conversation">
+                <a href="smalltalk.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Smalltalk conversation (freeform)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -294,7 +380,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Advanced conversation","level":"2.4","depth":1,"previous":{"title":"Building a simple conversation","level":"2.3","depth":1,"path":"buildingABot/simpleConversation.md","ref":"buildingABot/simpleConversation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/advandedConversationTree.md","mtime":"2018-02-05T12:19:45.985Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T12:19:55.497Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Advanced conversation (structured)","level":"2.5","depth":1,"previous":{"title":"Smalltalk conversation (freeform)","level":"2.4","depth":1,"path":"buildingABot/smalltalk.md","ref":"buildingABot/smalltalk.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/advandedConversationTree.md","mtime":"2018-02-06T12:36:20.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-06T13:13:03.937Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

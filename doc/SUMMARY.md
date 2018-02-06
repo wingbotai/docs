@@ -9,4 +9,5 @@
 * [Bot's character](buildingABot/yourCharacter.md)
 * [Design rules and terms](buildingABot/rulesAndTerms.md)
 * [Building a simple conversation](buildingABot/simpleConversation.md)
-* [Advanced conversation](buildingABot/advandedConversationTree.md)
+* [Smalltalk conversation (freeform)](buildingABot/smalltalk.md)
+* [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)

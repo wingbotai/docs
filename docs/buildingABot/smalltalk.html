@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Design rules and terms · Wingbot.ai</title>
+        <title>Smalltalk conversation (freeform) · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="simpleConversation.html" />
+    <link rel="next" href="advandedConversationTree.html" />
     
     
-    <link rel="prev" href="yourCharacter.html" />
+    <link rel="prev" href="simpleConversation.html" />
     
 
     </head>
@@ -128,7 +128,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="rulesAndTerms.html">
+        <li class="chapter " data-level="2.2" data-path="rulesAndTerms.html">
             
                 <a href="rulesAndTerms.html">
             
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="smalltalk.html">
+        <li class="chapter active" data-level="2.4" data-path="smalltalk.html">
             
                 <a href="smalltalk.html">
             
@@ -210,7 +210,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Design rules and terms</a>
+        <a href=".." >Smalltalk conversation (freeform)</a>
     </h1>
 </div>
 
@@ -225,73 +225,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rules-and-terms"><a name="rules-and-terms" class="plugin-anchor" href="#rules-and-terms"><i class="fa fa-link" aria-hidden="true"></i></a>Rules and terms</h1>
-<h2 id="rules-and-tips"><a name="rules-and-tips" class="plugin-anchor" href="#rules-and-tips"><i class="fa fa-link" aria-hidden="true"></i></a>Rules and tips</h2>
+                                <h1 id="making-smalltalk-conversation-tree"><a name="making-smalltalk-conversation-tree" class="plugin-anchor" href="#making-smalltalk-conversation-tree"><i class="fa fa-link" aria-hidden="true"></i></a>Making Smalltalk conversation tree</h1>
+<p>Smalltalk conversation pattern use usefull, when you want to cover a large number of user questions with a simple answer.</p>
+<p><strong>Q:</strong> what is your name
+<strong>A:</strong> I&apos;am a bot</p>
 <ul>
-<li><p><strong>Set low expectations</strong></p>
-<p>And be ready to deliver more then expected.</p>
-</li>
-<li><p><strong>Don&apos;t pretend to be a human</strong></p>
-<p>It&apos;s better, when bot acts like bot - not pretends to be a human.</p>
-</li>
-<li><p><strong>Always lead the dialog</strong></p>
-<p>There always should be &quot;call to action&quot; in your interaction. Never let user to think long about what to ask bot. You can use <strong>quick replies</strong> as hints.</p>
-</li>
-<li><p><strong>Keep conversation logic simple</strong></p>
-<p>Simple things works. Not the AI or developers makes your bot smart.</p>
-</li>
-<li><p><strong>Use your visual style</strong></p>
-<p>User experience will be much better when using media templates.</p>
-</li>
-<li><p><strong>Time is your friend</strong></p>
-<p>You can always <strong>wait</strong> with your answer.</p>
-</li>
+<li><em>what can you do</em></li>
+<li><em>choose me a coffee</em></li>
 </ul>
-<h2 id="terms"><a name="terms" class="plugin-anchor" href="#terms"><i class="fa fa-link" aria-hidden="true"></i></a>Terms</h2>
+<p><strong>Q:</strong> what can yo do
+<strong>A:</strong> I can find you a coffee beverage</p>
 <ul>
-<li><p><strong>Chat Event</strong> - everything what user does</p>
+<li><em>what is your name</em></li>
+<li><em>choose me a coffee</em></li>
+</ul>
+<p>It&apos;s good to keep conversation flow, so it&apos;s always good to offer quick replies.</p>
+<ol>
+<li><p><strong>Create a new Conversation tree called &quot;Smalltalk&quot;</strong></p>
 <ul>
-<li>text message</li>
-<li>menu click</li>
-<li>handover</li>
-<li>sent media (image, location, video, ...)</li>
-<li>button click</li>
-<li>quick reply click</li>
+<li>click on &quot;Add&quot; button and call the tree &quot;Smalltalk&quot;</li>
 </ul>
+<p><img src="addSmalltalk.png" alt="add smalltalk"></p>
 </li>
-<li><p><strong>Reaction</strong> - everything, what bot says</p>
+<li><p><strong>Create a first interaction: &quot;What is your name&quot;</strong></p>
 <ul>
-<li>text message</li>
-<li>handover</li>
-<li>sent media (image, location, video, ...)</li>
-<li>sent templates (carousel, lists, ...)</li>
+<li>add new interaction and call it &quot;What is your name&quot;</li>
+<li>add a Message response and set it&apos;s text: &quot;I&apos;am a bot&quot;</li>
+<li>let&apos;s add a Quick reply &quot;what can you do&quot; leading to a new interaction &quot;What can you do&quot;</li>
+<li>and let&apos;s add a Quick reply &quot;choose me a coffee&quot; leading to a new interaction &quot;Choose me a coffee&quot;</li>
 </ul>
+<p><img src="whatIsYourName.png" alt="what is your name"></p>
 </li>
-<li><p><strong>Interaction</strong> - reaction to Chat Event</p>
-<p>Each interaction has theese settings:</p>
+</ol>
+<ol>
+<li><p><strong>Fill a send interaction: &quot;What can you do&quot;</strong></p>
 <ul>
-<li>name - <em>helps identifying interaction in analytics and it&apos;s referencing</em></li>
-<li>fallback toggle - <em>when enabled, all events will pass in</em></li>
-<li>AI samples - <em>user message samples, which triggers the Interaction</em></li>
-<li>contains a set of Reactions</li>
+<li>interaction &quot;What can you do&quot; has been created in previous step when creating a Quick reply</li>
+<li>add a Message response and set it&apos;s text: &quot;I can find you a coffee beverage&quot;</li>
+<li>let&apos;s add a Quick reply &quot;what is your name&quot; leading to a the interaction &quot;What is your name&quot;</li>
+<li>and let&apos;s add a Quick reply &quot;choose me a coffee&quot; leading to a the interaction &quot;Choose me a coffee&quot;</li>
 </ul>
+<p><img src="whatCanYouDo.png" alt="what can you do"></p>
 </li>
-<li><p><strong>Quick Reply</strong> - suggested response text</p>
-<p>Quick replies allows user to reply without typing. Quick replies leads the coversation.</p>
-</li>
-<li><p><strong>Intent</strong> - the action recognised by AI</p>
-<p>When user writes a text message, AI tries to recognise, what intent user has.</p>
-</li>
-<li><p><strong>AI - the machine learning</strong></p>
-<p>Tool, which recognises users intent from text. AI learns from AI samples</p>
-</li>
-<li><p><strong>Conversation Trees</strong> - organised group of Interactions</p>
-<p>Interactions are evaulated in order, they appear in Conversation tree. Conversation trees can be embedded in other conversation trees.</p>
-<blockquote>
-<p><strong>Beware of &quot;circular reverences&quot;</strong></p>
-</blockquote>
-</li>
+<li><p><strong>Create Intents and write down sentence examples</strong></p>
+<ul>
+<li>at both of theese two interactions, click the &quot;keyboard&quot; button and write down examples - sentences, which takes user to theese interactions</li>
 </ul>
+<p><img src="aiSentences.png" alt="what can you do"></p>
+</li>
+<li><p><strong>Make the exit interaction - &quot;Choose me a coffee&quot;</strong></p>
+<ul>
+<li>put a new Exit Block into the interaction &quot;Choose me a coffee&quot; and call it &quot;Choose coffee&quot;</li>
+</ul>
+<p><img src="chooseCoffeeExit.png" alt="exit point"></p>
+</li>
+<li><p><strong>Include the &quot;Smalltalk&quot; conversation tree in the Root Block</strong></p>
+<ul>
+<li>go to &quot;Root block&quot; at the bot&apos;s homepage</li>
+<li>create a new interaction and move it after &quot;Start&quot; interaction</li>
+<li>name it &quot;Smalltalk&quot; for example</li>
+<li>insert an &quot;Include&quot; block into the interaction and choose &quot;Smalltalk&quot; subtree</li>
+<li>now you can configure exit point &quot;Choose coffee&quot;</li>
+<li>for example, send a message and redirect user to &quot;Choose coffee&quot; interaction</li>
+<li><strong>Important: </strong>by clicking <strong>the Asterisk</strong> make this interaction to intercept all communication</li>
+</ul>
+<p><img src="includeSmalltalkBlock.png" alt="set state"></p>
+</li>
+</ol>
+<h2 id="how-it-works"><a name="how-it-works" class="plugin-anchor" href="#how-it-works"><i class="fa fa-link" aria-hidden="true"></i></a>How it works?</h2>
+<p><img src="smalltalkHow.png" alt="how the smalltalk works"></p>
 
                                 
                                 </section>
@@ -319,12 +321,12 @@
 
             
                 
-                <a href="yourCharacter.html" class="navigation navigation-prev " aria-label="Previous page: Bot's character">
+                <a href="simpleConversation.html" class="navigation navigation-prev " aria-label="Previous page: Building a simple conversation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="simpleConversation.html" class="navigation navigation-next " aria-label="Next page: Building a simple conversation">
+                <a href="advandedConversationTree.html" class="navigation navigation-next " aria-label="Next page: Advanced conversation (structured)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -335,7 +337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Design rules and terms","level":"2.2","depth":1,"next":{"title":"Building a simple conversation","level":"2.3","depth":1,"path":"buildingABot/simpleConversation.md","ref":"buildingABot/simpleConversation.md","articles":[]},"previous":{"title":"Bot's character","level":"2.1","depth":1,"path":"buildingABot/yourCharacter.md","ref":"buildingABot/yourCharacter.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/rulesAndTerms.md","mtime":"2018-02-05T09:33:23.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-06T13:13:03.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Smalltalk conversation (freeform)","level":"2.4","depth":1,"next":{"title":"Advanced conversation (structured)","level":"2.5","depth":1,"path":"buildingABot/advandedConversationTree.md","ref":"buildingABot/advandedConversationTree.md","articles":[]},"previous":{"title":"Building a simple conversation","level":"2.3","depth":1,"path":"buildingABot/simpleConversation.md","ref":"buildingABot/simpleConversation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/smalltalk.md","mtime":"2018-02-06T13:03:17.021Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-06T13:13:03.937Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
