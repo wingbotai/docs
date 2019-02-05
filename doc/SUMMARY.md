@@ -4,6 +4,10 @@
 
 * [Getting Started](README.md)
 
+## Conversational patterns
+
+* [Bot's character](conversationPatterns/openQuestions.md)
+
 ## Building a bot
 
 * [Bot's character](buildingABot/yourCharacter.md)
