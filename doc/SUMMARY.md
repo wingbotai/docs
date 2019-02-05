@@ -6,7 +6,7 @@
 
 ## Conversational patterns
 
-* [Bot's character](conversationPatterns/openQuestions.md)
+* [Asking an open question](conversationPatterns/openQuestions.md)
 
 ## Building a bot
 
