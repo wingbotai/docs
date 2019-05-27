@@ -100,7 +100,8 @@ We sent the message and user will response. He can just type the message and we 
 Quick replies provides user a reaction without typing. Reactions are prepared for user and he can easily reply by clicking on them.
 
 Example of quick replies:
-//foto - quick replies on coffee bot
+
+![bot visual](../createDialogue/quick_replies.png)
 
 8. **Add Quick Reply**
 
