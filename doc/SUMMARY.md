@@ -1,6 +1,59 @@
 # Summary
 
-## Using a Wingbot
+## Getting started with chatbots
+
+<!--* Finding purpose of chatbot
+* Principles of building chatbot-->
+* [Chatbot's character](buildingABot/yourCharacter.md)
+* [Design rules and terms](buildingABot/rulesAndTerms.md)
+
+## Getting started with wingbot.ai
+
+* [Creating dialogue](buildingABot/createDialogue/create_dialogue.md)
+    * [First interaction](buildingABot/createDialogue/create_dialogue.md#create-basic-dialogue-with-interaction)
+    * [First intent handler](buildingABot/createDialogue/create_dialogue.md#handle-user-responses)
+    * [First quick reply](buildingABot/createDialogue/create_dialogue.md#quick-replies-of-user)
+* [Building audience](buildingABot/buildingAudience/building_audience.md)
+<!-- * Creating smalltalk/FAQ -->
+* [Editing service interactions](buildingABot/serviceInteractions/service_interactions.md)
+
+* [Set a facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
+
+<!--
+## Update your chatbot to next level
+
+* Analyze chatbot 
+* Friendly chatbot
+* Send campaign to users -->
+
+<!--## Wingbot features
+
+* Interactions
+    * Message
+    * Media
+    * Go to
+    * Button
+    * Carousel
+    * Subscripton
+    * Plugin
+    * Snipet
+
+* Audiences
+
+* Campaigns
+
+* NLP
+    * Intents
+        * Global intent
+        * Local intent
+        * Handler of intent
+    * Entities
+
+* Settings
+
+
+
+
 
 * [Getting Started](README.md)
 
@@ -8,10 +61,7 @@
 
 * [Asking an open question](conversationPatterns/openQuestions.md)
 
-## Building a bot
 
-* [Bot's character](buildingABot/yourCharacter.md)
-* [Design rules and terms](buildingABot/rulesAndTerms.md)
-* [Building a simple conversation](buildingABot/simpleConversation.md)
+
 * [Smalltalk conversation (freeform)](buildingABot/smalltalk.md)
-* [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)
+* [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)-->
