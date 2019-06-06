@@ -14,10 +14,10 @@
     * [First intent handler](buildingABot/createDialogue/create_dialogue.md#handle-user-responses)
     * [First quick reply](buildingABot/createDialogue/create_dialogue.md#quick-replies-of-user)
 * [Building audience](buildingABot/buildingAudience/building_audience.md)
-<!-- * Creating smalltalk/FAQ -->
+* [Creating FAQ/smalltalk](buildingABot/faq/smalltalk_faq.md)
 * [Editing service interactions](buildingABot/serviceInteractions/service_interactions.md)
-
-* [Set a facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
+<!-- Testing of chatbot-->
+* [Set up a Facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
 
 <!--
 ## Update your chatbot to next level

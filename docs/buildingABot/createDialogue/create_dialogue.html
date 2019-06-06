@@ -212,7 +212,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../serviceInteractions/service_interactions.html">
+        <li class="chapter " data-level="2.3" data-path="../faq/smalltalk_faq.html">
+            
+                <a href="../faq/smalltalk_faq.html">
+            
+                    
+                    Creating FAQ/smalltalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../serviceInteractions/service_interactions.html">
             
                 <a href="../serviceInteractions/service_interactions.html">
             
@@ -225,12 +238,12 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../setFacebookAd/set_facebook_ad.html">
+        <li class="chapter " data-level="2.5" data-path="../setFacebookAd/set_facebook_ad.html">
             
                 <a href="../setFacebookAd/set_facebook_ad.html">
             
                     
-                    Set a facebook ad
+                    Set up a Facebook ad
             
                 </a>
             
@@ -286,15 +299,8 @@
                                 <h1 id="create-dialogue-in-wingbot"><a name="create-dialogue-in-wingbot" class="plugin-anchor" href="#create-dialogue-in-wingbot"><i class="fa fa-link" aria-hidden="true"></i></a>Create Dialogue in Wingbot</h1>
 <p>We use folders for files that have something in common. We have dialogues and interactions in chatbot terminology. Dialogues are like folders and are used for interactions that are about one topic. Dialogue can be about topic &quot;Coffee typology&quot; and interaction is message to user &quot;Do you drink coffee with milk?&quot;.</p>
 <h2 id="create-basic-dialogue-with-interaction"><a name="create-basic-dialogue-with-interaction" class="plugin-anchor" href="#create-basic-dialogue-with-interaction"><i class="fa fa-link" aria-hidden="true"></i></a>Create basic dialogue with interaction</h2>
-<ol>
-<li><p><strong>Log in to wingbot</strong></p>
-<ul>
-<li>Don&apos;t forget to log in :)</li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<ol>
+<pre><code>Don&apos;t forget to log in :)
+</code></pre><ol>
 <li><p><strong>Add a New Dialogue</strong></p>
 <p>We want to create simple conversation in our example. And we will talk about coffee with our user.</p>
 <p>Conversation tree
@@ -345,23 +351,26 @@ Info: Text messages should not be so long. Shorter messages are better. If you c
 <li><p><strong>Add intents to handler in interaction</strong></p>
 <ul>
 <li>Coffee drinker will give us positive reaction. We can use &quot;positive&quot; to the name of intent.</li>
-<li>and now we can add texts, what can user type if he is coffee drinker</li>
-</ul>
+<li><p>And now we can add texts, what can user type if he is coffee drinker.</p>
+<blockquote>
 <p>Info: Intents can be used in more interactions.</p>
 <p>Info: You don&apos;t have to worry about interpunction or uppercase.</p>
 <p>Remember: User can type with mistakes.</p>
+</blockquote>
+</li>
+</ul>
 <p><img src="6.png" alt="bot visual"></p>
 </li>
 <li><p><strong>Sent user to next interaction</strong></p>
 <p>We can continue with dialogue in next interactions. </p>
 <ul>
-<li>use &quot;Go to&quot; below the intents, type the name of the next interaction and click to create in dropdown.</li>
+<li>Use &quot;Go to&quot; below the intents, type the name of the next interaction and click to create in dropdown.</li>
 </ul>
 <p><img src="7.png" alt="bot visual"></p>
 </li>
 <li><p><strong>Handle user responses in interaction for negative responses</strong></p>
 <ul>
-<li>repeat steps 4. - 6. to create handler for negative responses</li>
+<li>Repeat steps 4. - 6. to create handler for negative responses.</li>
 </ul>
 <p><img src="8.png" alt="bot visual"></p>
 </li>
@@ -373,34 +382,39 @@ Info: Text messages should not be so long. Shorter messages are better. If you c
 <ol>
 <li><p><strong>Add Quick Reply</strong></p>
 <ul>
-<li>Go back to messages, which we int to user</li>
-<li>Under the last message is &quot;add a quick reply suggestion&quot;</li>
+<li>Go back to messages, which we int to user.</li>
+<li>Under the last message is &quot;add a quick reply suggestion&quot;.</li>
 </ul>
 <p><img src="9.png" alt="bot visual"></p>
 </li>
 <li><p><strong>Text of quick reply</strong></p>
 <ul>
-<li>Type the text, which can user use. We will use &quot;Yes, I do&quot;</li>
-</ul>
+<li><p>Type the text, which can user use. We will use &quot;Yes, I do&quot;.</p>
+<blockquote>
 <p>Info: Maximum length of quick reply text is 20 characters.</p>
+</blockquote>
+</li>
+</ul>
 <p><img src="10.png" alt="bot visual"></p>
 </li>
 <li><p><strong>Set up the quick reply &quot;Go to&quot;</strong></p>
 <ul>
-<li>We should send user to next interaction after using quick reply. Now should we use the same interaction like in text handlers. In our example we will use the interaction for &quot;positive&quot; intents &quot;Coffee - step, which coffee?&quot;</li>
+<li>We should send user to next interaction after using quick reply. Now should we use the same interaction like in text handlers. In our example we will use the interaction for &quot;positive&quot; intents &quot;Coffee - step, which coffee?&quot;.</li>
 </ul>
 <p><img src="11.png" alt="bot visual"></p>
 </li>
 <li><p><strong>Prepare quick reply for negative responses</strong></p>
 <ul>
-<li>repeat steps 1. - 3. to create guick reply for negative responses</li>
+<li>Repeat steps 1. - 3. to create guick reply for negative responses.</li>
 </ul>
 <p><img src="12.png" alt="bot visual"></p>
 </li>
 </ol>
 <p>Tadaaa! We just learned principles of building conversation.</p>
-<p>Check your dialogue tree in Diagram (link is in main menu at the top) :)</p>
+<h2 id="diagram"><a name="diagram" class="plugin-anchor" href="#diagram"><i class="fa fa-link" aria-hidden="true"></i></a>Diagram</h2>
+<p>Check your dialogue tree in Diagram (link is in main menu at the top of page) :)</p>
 <p>Diagram is also easy way how to present your chatbot.</p>
+<p><img src="0.png" alt="bot visual"></p>
 
                                 
                                 </section>
@@ -444,7 +458,7 @@ Info: Text messages should not be so long. Shorter messages are better. If you c
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Creating dialogue","level":"2.1","depth":1,"next":{"title":"First interaction","level":"2.1.1","depth":2,"anchor":"#create-basic-dialogue-with-interaction","path":"buildingABot/createDialogue/create_dialogue.md","ref":"buildingABot/createDialogue/create_dialogue.md#create-basic-dialogue-with-interaction","articles":[]},"previous":{"title":"Design rules and terms","level":"1.3","depth":1,"path":"buildingABot/rulesAndTerms.md","ref":"buildingABot/rulesAndTerms.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/createDialogue/create_dialogue.md","mtime":"2019-05-27T12:09:57.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-27T12:32:25.249Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Creating dialogue","level":"2.1","depth":1,"next":{"title":"First interaction","level":"2.1.1","depth":2,"anchor":"#create-basic-dialogue-with-interaction","path":"buildingABot/createDialogue/create_dialogue.md","ref":"buildingABot/createDialogue/create_dialogue.md#create-basic-dialogue-with-interaction","articles":[]},"previous":{"title":"Design rules and terms","level":"1.3","depth":1,"path":"buildingABot/rulesAndTerms.md","ref":"buildingABot/rulesAndTerms.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/createDialogue/create_dialogue.md","mtime":"2019-06-06T10:55:45.282Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-06T11:29:05.736Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
