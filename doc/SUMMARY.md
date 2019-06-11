@@ -15,8 +15,10 @@
     * [First quick reply](buildingABot/createDialogue/create_dialogue.md#quick-replies-of-user)
 * [Building audience](buildingABot/buildingAudience/building_audience.md)
 * [Creating FAQ/smalltalk](buildingABot/faq/smalltalk_faq.md)
+    * [FAQ](buildingABot/faq/smalltalk_faq.md#answers-to-frequently-asked-questions-and-common-cases)
+    * [Smalltalk](buildingABot/faq/smalltalk_faq.md#smalltalk-with-chatbot)
 * [Editing service interactions](buildingABot/serviceInteractions/service_interactions.md)
-<!-- Testing of chatbot-->
+* [Testing of chatbot](buildingABot/testing/testing.md)
 * [Set up a Facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
 
 <!--
