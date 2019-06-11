@@ -5,7 +5,7 @@ Important part of a chatbot is reaction to a user input even it's not in a dialo
 We will use intents again to solve these inputs. We used intents once, when we handed reaction of user in interaction. This is little bit different. Intent has not to be in reaction to your interaction. They want to know answer in different part of chatbot. So we let them jump to another part of dialogue for answer/reaction.
 
 Diagram should help you to understand better:
-![bot visual](../FAQ/diagram.png)
+![bot visual](../faq/diagram.png)
 - "WhereIsTheEvent" and "Navigation" are intents, which can be triggered from any part of the bot.
 - "positive" and "negative" are intents which are trigered immediately in reaction to this interaction. 
 - Why is intent "positive" used like this? The reason is that you don't want to have interaction Navigation as universal reaction to "positive" intents. The reaction for this content always depends on context. 
