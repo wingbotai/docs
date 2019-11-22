@@ -45,8 +45,8 @@ And let's have theese three interactions with following conditions
 
     This interaction is matching, but:
 
-    - there'll be little penalisation (0.001) for missing optional entity **`@transportTyp`e**
-    - there'll be penalisation (0.05) for redundantrecognized entity **`@destination`**
+    - there'll be little penalisation (0.001) for missing optional entity **`@transportType`**
+    - there'll be penalisation (0.05) for redundant recognized entity **`@destination`**
 
 3. **entities: `@destination`, intent: `travel`**
 
@@ -75,3 +75,25 @@ An utterance should keep its meaning while replacing the marked entity with itâ€
 There should be an interaction for all possible combinations of entities used in intent utterances.
 
 ![covering the intent with interactions](./covering.png)
+
+## Best practices for building the training data
+
+**before creating new intent**
+
+- use the **NLP tester** to ensure there is not already similar intent
+
+**when adding utterance examples**
+
+- always add **at least a pair of examples**
+
+    example: `I need a break` and `I want a break`
+
+- if a word could be omitted, add another example
+
+    example when adding `I need a break` add also `I need break` and `need break`
+
+- combine short examples with long examples (use your imagination)
+
+    example: `need coffee` and `i need a coffee please`
+
+- an intent should have **at least 10 utterances**

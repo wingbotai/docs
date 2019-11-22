@@ -407,8 +407,8 @@
 <li><p><strong>entities: optional <code>@transportType?</code>, intent: <code>travel</code></strong></p>
 <p> This interaction is matching, but:</p>
 <ul>
-<li>there&apos;ll be little penalisation (0.001) for missing optional entity <strong><code>@transportTyp</code>e</strong></li>
-<li>there&apos;ll be penalisation (0.05) for redundantrecognized entity <strong><code>@destination</code></strong></li>
+<li>there&apos;ll be little penalisation (0.001) for missing optional entity <strong><code>@transportType</code></strong></li>
+<li>there&apos;ll be penalisation (0.05) for redundant recognized entity <strong><code>@destination</code></strong></li>
 </ul>
 </li>
 <li><p><strong>entities: <code>@destination</code>, intent: <code>travel</code></strong></p>
@@ -433,6 +433,25 @@
 <h2 id="the-bot-should-be-ready-to-answer-all-entity-combinations"><a name="the-bot-should-be-ready-to-answer-all-entity-combinations" class="plugin-anchor" href="#the-bot-should-be-ready-to-answer-all-entity-combinations"><i class="fa fa-link" aria-hidden="true"></i></a>The bot should be ready to answer all entity combinations</h2>
 <p>There should be an interaction for all possible combinations of entities used in intent utterances.</p>
 <p><img src="covering.png" alt="covering the intent with interactions"></p>
+<h2 id="best-practices-for-building-the-training-data"><a name="best-practices-for-building-the-training-data" class="plugin-anchor" href="#best-practices-for-building-the-training-data"><i class="fa fa-link" aria-hidden="true"></i></a>Best practices for building the training data</h2>
+<p><strong>before creating new intent</strong></p>
+<ul>
+<li>use the <strong>NLP tester</strong> to ensure there is not already similar intent</li>
+</ul>
+<p><strong>when adding utterance examples</strong></p>
+<ul>
+<li><p>always add <strong>at least a pair of examples</strong></p>
+<p>  example: <code>I need a break</code> and <code>I want a break</code></p>
+</li>
+<li><p>if a word could be omitted, add another example</p>
+<p>  example when adding <code>I need a break</code> add also <code>I need break</code> and <code>need break</code></p>
+</li>
+<li><p>combine short examples with long examples (use your imagination)</p>
+<p>  example: <code>need coffee</code> and <code>i need a coffee please</code></p>
+</li>
+<li><p>an intent should have <strong>at least 10 utterances</strong></p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -476,7 +495,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basic concepts","level":"3.1","depth":1,"next":{"title":"Troubleshooting","level":"3.2","depth":1,"path":"nlp/troubleshooting.md","ref":"nlp/troubleshooting.md","articles":[]},"previous":{"title":"Set up a Facebook ad","level":"2.6","depth":1,"path":"buildingABot/setFacebookAd/set_facebook_ad.md","ref":"buildingABot/setFacebookAd/set_facebook_ad.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"nlp/understanding.md","mtime":"2019-11-22T19:20:18.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:27:14.955Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Basic concepts","level":"3.1","depth":1,"next":{"title":"Troubleshooting","level":"3.2","depth":1,"path":"nlp/troubleshooting.md","ref":"nlp/troubleshooting.md","articles":[]},"previous":{"title":"Set up a Facebook ad","level":"2.6","depth":1,"path":"buildingABot/setFacebookAd/set_facebook_ad.md","ref":"buildingABot/setFacebookAd/set_facebook_ad.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"nlp/understanding.md","mtime":"2019-11-22T19:42:33.662Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:42:40.999Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
