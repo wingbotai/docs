@@ -2,8 +2,8 @@
 
 ## How the intent condition is evaluated
 
-- **any** of listed intents is matching
-- **all** of listed entity conditions is matching
+- **any** of listed intents are matching
+- **all** of listed entity conditions are matching
 
 So the condition could look like this
 
