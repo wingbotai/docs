@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Bot's character · Wingbot.ai</title>
+        <title>Troubleshooting · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="rulesAndTerms.html" />
     
-    
-    <link rel="prev" href="../conversationPatterns/openQuestions.html" />
+    <link rel="prev" href="understanding.html" />
     
 
     </head>
@@ -135,9 +133,9 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="yourCharacter.html">
+        <li class="chapter " data-level="3.1" data-path="../buildingABot/yourCharacter.html">
             
-                <a href="yourCharacter.html">
+                <a href="../buildingABot/yourCharacter.html">
             
                     
                     Bot's character
@@ -148,9 +146,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="rulesAndTerms.html">
+        <li class="chapter " data-level="3.2" data-path="../buildingABot/rulesAndTerms.html">
             
-                <a href="rulesAndTerms.html">
+                <a href="../buildingABot/rulesAndTerms.html">
             
                     
                     Design rules and terms
@@ -161,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="simpleConversation.html">
+        <li class="chapter " data-level="3.3" data-path="../buildingABot/simpleConversation.html">
             
-                <a href="simpleConversation.html">
+                <a href="../buildingABot/simpleConversation.html">
             
                     
                     Building a simple conversation
@@ -174,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="smalltalk.html">
+        <li class="chapter " data-level="3.4" data-path="../buildingABot/smalltalk.html">
             
-                <a href="smalltalk.html">
+                <a href="../buildingABot/smalltalk.html">
             
                     
                     Smalltalk conversation (freeform)
@@ -187,9 +185,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="advandedConversationTree.html">
+        <li class="chapter " data-level="3.5" data-path="../buildingABot/advandedConversationTree.html">
             
-                <a href="advandedConversationTree.html">
+                <a href="../buildingABot/advandedConversationTree.html">
             
                     
                     Advanced conversation (structured)
@@ -207,9 +205,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../nlp/understanding.html">
+        <li class="chapter " data-level="4.1" data-path="understanding.html">
             
-                <a href="../nlp/understanding.html">
+                <a href="understanding.html">
             
                     
                     Basic concepts
@@ -220,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../nlp/troubleshooting.html">
+        <li class="chapter active" data-level="4.2" data-path="troubleshooting.html">
             
-                <a href="../nlp/troubleshooting.html">
+                <a href="troubleshooting.html">
             
                     
                     Troubleshooting
@@ -263,7 +261,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Bot's character</a>
+        <a href=".." >Troubleshooting</a>
     </h1>
 </div>
 
@@ -278,37 +276,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="designing-a-character"><a name="designing-a-character" class="plugin-anchor" href="#designing-a-character"><i class="fa fa-link" aria-hidden="true"></i></a>Designing a character</h1>
-<p>Defining bot character has two important parts:</p>
-<ul>
-<li><p><strong>1. Personality definition - the character bible</strong></p>
-<p>Bot personality is a guide, how to write interactions - for everyone who gets involved.</p>
-<blockquote>
-<p>When writing an interaction, always ask yourself: &quot;what whould bot say&quot;</p>
-</blockquote>
-<p>This guide can contain for example:</p>
-<ul>
-<li>where your bot have studied, where &quot;works&quot;</li>
-<li>where the bot lives, what is the bot&apos;s hobby</li>
-<li>what kind he or she is</li>
-<li>what are the tragic flaws of bot</li>
-<li>is bot friendly and how easily can get upset</li>
-</ul>
-<p><br></p>
+                                <h1 id="troubleshooting-nlp"><a name="troubleshooting-nlp" class="plugin-anchor" href="#troubleshooting-nlp"><i class="fa fa-link" aria-hidden="true"></i></a>Troubleshooting NLP</h1>
+<p>This is the best approach to reveal most common mistakes.</p>
+<ol>
+<li><p><strong>Is the NLP well trained?</strong></p>
+<p> Use the <strong>NLP trainer/tester</strong> to ensure the right intent was found.</p>
+<p> <img src="trainer.png" alt="trainer"></p>
+<p> If a score is too low, or a different intent was matched, refine utterances of the intent.</p>
 </li>
-<li><p><strong>2. Bots visual style</strong></p>
-<p>Visual style is very important part of character. It includes:</p>
-<ul>
-<li>profile and cover image</li>
-<li>images and videos sent during conversation</li>
-<li>visual style of bot&apos;s menu</li>
-<li><p>visual style of bot&apos;s templates (Carousels, Lists, etc.)</p>
-<p><br></p>
+<li><p><strong>Is there an interaction with appropriate intent condition?</strong></p>
+<p> Often there&apos;s a missing or incorrect intent/entity condition.</p>
+<p> <img src="condition.png" alt="condition"></p>
 </li>
-</ul>
-<p><img src="../visuals.png" alt="bot visual"></p>
+<li><p><strong>There&apos;s a response fallback in previous interaction, which intercepts all user responses</strong></p>
+<p> Use <strong>conversation history</strong> to reveal a context, where your response was processed.</p>
 </li>
-</ul>
+<li><p><strong>The general condition should be below more complex conditions (2.xx)</strong></p>
+<p> With older versions of Wingbot it&apos;s important to keep more specific conditions above the less specific.</p>
+<p> <img src="order.png" alt="right order"></p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -336,14 +323,10 @@
 
             
                 
-                <a href="../conversationPatterns/openQuestions.html" class="navigation navigation-prev " aria-label="Previous page: Asking an open question">
+                <a href="understanding.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Basic concepts">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="rulesAndTerms.html" class="navigation navigation-next " aria-label="Next page: Design rules and terms">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -352,7 +335,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bot's character","level":"3.1","depth":1,"next":{"title":"Design rules and terms","level":"3.2","depth":1,"path":"buildingABot/rulesAndTerms.md","ref":"buildingABot/rulesAndTerms.md","articles":[]},"previous":{"title":"Asking an open question","level":"2.1","depth":1,"path":"conversationPatterns/openQuestions.md","ref":"conversationPatterns/openQuestions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"buildingABot/yourCharacter.md","mtime":"2018-02-01T09:10:35.482Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:21:52.289Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Troubleshooting","level":"4.2","depth":1,"previous":{"title":"Basic concepts","level":"4.1","depth":1,"path":"nlp/understanding.md","ref":"nlp/understanding.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"nlp/troubleshooting.md","mtime":"2019-11-22T19:21:18.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:21:52.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

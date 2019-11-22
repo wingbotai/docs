@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Asking an open question · Wingbot.ai</title>
+        <title>Basic concepts · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../buildingABot/yourCharacter.html" />
+    <link rel="next" href="troubleshooting.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../buildingABot/advandedConversationTree.html" />
     
 
     </head>
@@ -115,9 +115,9 @@
         
         
     
-        <li class="chapter active" data-level="2.1" data-path="openQuestions.html">
+        <li class="chapter " data-level="2.1" data-path="../conversationPatterns/openQuestions.html">
             
-                <a href="openQuestions.html">
+                <a href="../conversationPatterns/openQuestions.html">
             
                     
                     Asking an open question
@@ -207,9 +207,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../nlp/understanding.html">
+        <li class="chapter active" data-level="4.1" data-path="understanding.html">
             
-                <a href="../nlp/understanding.html">
+                <a href="understanding.html">
             
                     
                     Basic concepts
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../nlp/troubleshooting.html">
+        <li class="chapter " data-level="4.2" data-path="troubleshooting.html">
             
-                <a href="../nlp/troubleshooting.html">
+                <a href="troubleshooting.html">
             
                     
                     Troubleshooting
@@ -263,7 +263,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Asking an open question</a>
+        <a href=".." >Basic concepts</a>
     </h1>
 </div>
 
@@ -278,66 +278,65 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="asking-open-questions"><a name="asking-open-questions" class="plugin-anchor" href="#asking-open-questions"><i class="fa fa-link" aria-hidden="true"></i></a>Asking open questions</h1>
-<p>Open questions makes a conversation more natural and pleasant. There are few tips, how to make it right:</p>
+                                <h1 id="understanding-the-concepts"><a name="understanding-the-concepts" class="plugin-anchor" href="#understanding-the-concepts"><i class="fa fa-link" aria-hidden="true"></i></a>Understanding the concepts</h1>
+<h2 id="how-the-intent-condition-is-evaluated"><a name="how-the-intent-condition-is-evaluated" class="plugin-anchor" href="#how-the-intent-condition-is-evaluated"><i class="fa fa-link" aria-hidden="true"></i></a>How the intent condition is evaluated</h2>
 <ul>
-<li>keep the number of possible responses low</li>
-<li>mind, that <strong>intens should have unique message samples</strong> - it means
-you&apos;ll have to reuse your intents (like &quot;positive&quot; response)</li>
+<li><strong>any</strong> of listed intents is matching</li>
+<li><strong>all</strong> of listed entity conditions is matching</li>
 </ul>
-<p>How the open question look like?</p>
-<p><img src="openQuestionA.png" alt="the question"></p>
-<p>So the user can answer simply:</p>
-<p><img src="openQuestionB.png" alt="the response"></p>
-<p>How to achieve this pattern?</p>
+<p>So the condition could look like this</p>
+<pre><code>( [entity-1] AND [entity-2] ) AND ( [intent-1] OR [intent-2] )
+</code></pre><h2 id="the-closest-match-wins"><a name="the-closest-match-wins" class="plugin-anchor" href="#the-closest-match-wins"><i class="fa fa-link" aria-hidden="true"></i></a>The closest match wins</h2>
+<p>If there is <strong>more then one matching conditions</strong>, the closest one wins. Also <strong>in 2.xx version bots</strong> the sophisticated conditions should be above the less complex conditions.</p>
+<p>Also if <strong>the difference is too big</strong> (lot of additional redundant entities), there&apos;ll be no match.</p>
+<h2 id="how-the-matching-score-is-calculated"><a name="how-the-matching-score-is-calculated" class="plugin-anchor" href="#how-the-matching-score-is-calculated"><i class="fa fa-link" aria-hidden="true"></i></a>How the matching score is calculated</h2>
+<p>Let&apos;s have a following intent and some entities matched:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;intent&quot;</span>: <span class="hljs-string">&quot;travel&quot;</span>,
+    <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9</span>,
+    <span class="hljs-string">&quot;entites&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;entity&quot;</span>: <span class="hljs-string">&quot;destination&quot;</span>,
+            <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;Prague&quot;</span>,
+            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">1.0</span>
+        }
+    ]
+}
+</code></pre>
+<p>And let&apos;s have theese three interactions with following conditions</p>
 <ol>
-<li><p><strong>Start with a question without quick replies</strong></p>
-<ul>
-<li>make an open question, which forces user to respond very simply</li>
-</ul>
-<p><img src="openQuestions1.png" alt="simple open question"></p>
+<li><p><strong>entities: <code>@destination</code> and <code>@transportType</code>, intent: <code>travel</code></strong></p>
+<p> This interaction is not matching, because there&apos;s <strong><code>@transportTypes</code></strong> entity missing.</p>
 </li>
-<li><p><strong>Add an intent handler with &quot;handle text intent&quot; and specify an intent</strong></p>
+<li><p><strong>entities: optional <code>@transportType?</code>, intent: <code>travel</code></strong></p>
+<p> This interaction is matching, but:</p>
 <ul>
-<li>each intent should have a self descriptive name - first specify the name</li>
+<li>there&apos;ll be little penalisation (0.001) for missing optional entity <strong><code>@transportTyp</code>e</strong></li>
+<li>there&apos;ll be penalisation (0.05) for redundantrecognized entity <strong><code>@destination</code></strong></li>
 </ul>
-<p><img src="openQuestions2.png" alt="create the intent"></p>
 </li>
-<li><p><strong>Add some response samples as a training data</strong></p>
-<ul>
-<li>each response sample should be unique among the all training data</li>
-<li>when there&apos;s already an intent mathing your use case, <strong>re-use it!</strong></li>
-</ul>
-<p><img src="openQuestions3.png" alt="specify samples"></p>
+<li><p><strong>entities: <code>@destination</code>, intent: <code>travel</code></strong></p>
+<p> This interaction is fully matching and there&apos;ll be no penalisation.</p>
 </li>
-<li><p><strong>Create a bot&apos;s response</strong></p>
+<li><p><strong>intent: <code>travel</code></strong></p>
+<p> This interaction is matching, but:</p>
 <ul>
-<li>the effect will be better, when the response confirms the bot uderstands</li>
+<li>there&apos;ll be penalisation (0.05) for redundant recognized entity <strong><code>@destination</code></strong></li>
 </ul>
-<p><img src="openQuestions4.png" alt="specify samples"></p>
 </li>
-<li><p><strong>Specify another responses</strong></p>
+<li><p><strong>just entity: <code>@destination</code></strong></p>
+<p> This interaction is matching, but:</p>
 <ul>
-<li>you can use &quot;phrases matching&quot; instead of intents - just put a hashtag as a prefix of the intent: <code>#red</code></li>
+<li>there&apos;ll be penalisation (0.15) for redundant recognized intent <strong><code>travel</code></strong></li>
 </ul>
-<p><img src="openQuestions5.png" alt="another responses"></p>
-</li>
-<li><p><strong>OPTIONAL: you can specify a default response - the response fallback</strong></p>
-<ul>
-<li>when there&apos;s no matching response, this local fallback will be sent</li>
-</ul>
-<p><img src="openQuestions6.png" alt="another responses"></p>
-</li>
-<li><p><strong>OPTIONAL: specify more than one intent</strong></p>
-<ul>
-<li>when you&apos;d like to detect more than one intent at once, you can add them!</li>
-<li>toggle the switch from <strong>?</strong> to <strong>tags</strong> icon</li>
-<li>insert all intent names you&apos;d like to use</li>
-<li><strong>you can specify the training data in the &quot;Intents&quot; section</strong></li>
-</ul>
-<p><img src="openQuestions7.png" alt="multiple intents"></p>
 </li>
 </ol>
+<h2 id="an-entity-extends-the-utterance"><a name="an-entity-extends-the-utterance" class="plugin-anchor" href="#an-entity-extends-the-utterance"><i class="fa fa-link" aria-hidden="true"></i></a>An entity extends the utterance</h2>
+<p>An utterance should keep its meaning while replacing the marked entity with it&#x2019;s values.</p>
+<p><img src="intentandentities.png" alt="intent and entities"></p>
+<h2 id="the-bot-should-be-ready-to-answer-all-entity-combinations"><a name="the-bot-should-be-ready-to-answer-all-entity-combinations" class="plugin-anchor" href="#the-bot-should-be-ready-to-answer-all-entity-combinations"><i class="fa fa-link" aria-hidden="true"></i></a>The bot should be ready to answer all entity combinations</h2>
+<p>There should be an interaction for all possible combinations of entities used in intent utterances.</p>
+<p><img src="covering.png" alt="covering the intent with interactions"></p>
 
                                 
                                 </section>
@@ -365,12 +364,12 @@ you&apos;ll have to reuse your intents (like &quot;positive&quot; response)</li>
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Getting Started">
+                <a href="../buildingABot/advandedConversationTree.html" class="navigation navigation-prev " aria-label="Previous page: Advanced conversation (structured)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../buildingABot/yourCharacter.html" class="navigation navigation-next " aria-label="Next page: Bot's character">
+                <a href="troubleshooting.html" class="navigation navigation-next " aria-label="Next page: Troubleshooting">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -381,7 +380,7 @@ you&apos;ll have to reuse your intents (like &quot;positive&quot; response)</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Asking an open question","level":"2.1","depth":1,"next":{"title":"Bot's character","level":"3.1","depth":1,"path":"buildingABot/yourCharacter.md","ref":"buildingABot/yourCharacter.md","articles":[]},"previous":{"title":"Getting Started","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"conversationPatterns/openQuestions.md","mtime":"2019-02-05T09:27:18.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:21:52.289Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Basic concepts","level":"4.1","depth":1,"next":{"title":"Troubleshooting","level":"4.2","depth":1,"path":"nlp/troubleshooting.md","ref":"nlp/troubleshooting.md","articles":[]},"previous":{"title":"Advanced conversation (structured)","level":"3.5","depth":1,"path":"buildingABot/advandedConversationTree.md","ref":"buildingABot/advandedConversationTree.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"nlp/understanding.md","mtime":"2019-11-22T19:20:18.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T19:21:52.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

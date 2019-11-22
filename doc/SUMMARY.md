@@ -15,3 +15,8 @@
 * [Building a simple conversation](buildingABot/simpleConversation.md)
 * [Smalltalk conversation (freeform)](buildingABot/smalltalk.md)
 * [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)
+
+## NLP
+
+* [Basic concepts](nlp/understanding.md)
+* [Troubleshooting](nlp/troubleshooting.md)
