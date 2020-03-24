@@ -5,7 +5,7 @@
     "variables": {
         "twitter": "https://twitter.com/wingbotai"
     },
-    "plugins": [ "theme-default", "collapsible-menu", "anchors" ],
+    "plugins": [ "theme-default", "collapsible-menu", "anchors", "highlight"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "dark",
@@ -14,6 +14,11 @@
                     "lang": "js",
                     "name": "JavaScript",
                     "default": true
+                },
+                {
+                    "lang": "yaml",
+                    "name": "Yaml",
+                    "default": false
                 }
             ]
         }

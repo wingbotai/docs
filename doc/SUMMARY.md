@@ -25,6 +25,7 @@
 
 * [Basic concepts](nlp/understanding.md)
 * [Troubleshooting](nlp/troubleshooting.md)
+* [Building the training data](nlp/advancedNlp.md)
 
 <!--
 ## Update your chatbot to next level

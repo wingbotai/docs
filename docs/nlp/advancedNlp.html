@@ -1,0 +1,652 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Building the training data · Wingbot.ai</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Wingbot.ai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="troubleshooting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Getting started with chatbots</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../buildingABot/yourCharacter.html">
+            
+                <a href="../buildingABot/yourCharacter.html">
+            
+                    
+                    Chatbot's character
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../buildingABot/rulesAndTerms.html">
+            
+                <a href="../buildingABot/rulesAndTerms.html">
+            
+                    
+                    Design rules and terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting started with wingbot.ai</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../buildingABot/createDialogue/create_dialogue.html">
+            
+                <a href="../buildingABot/createDialogue/create_dialogue.html">
+            
+                    
+                    Creating dialogue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../buildingABot/createDialogue/create_dialogue.html">
+            
+                <a href="../buildingABot/createDialogue/create_dialogue.html#create-basic-dialogue-with-interaction">
+            
+                    
+                    First interaction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../buildingABot/createDialogue/create_dialogue.html">
+            
+                <a href="../buildingABot/createDialogue/create_dialogue.html#handle-user-responses">
+            
+                    
+                    First intent handler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../buildingABot/createDialogue/create_dialogue.html">
+            
+                <a href="../buildingABot/createDialogue/create_dialogue.html#quick-replies-of-user">
+            
+                    
+                    First quick reply
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../buildingABot/buildingAudience/building_audience.html">
+            
+                <a href="../buildingABot/buildingAudience/building_audience.html">
+            
+                    
+                    Building audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../buildingABot/faq/smalltalk_faq.html">
+            
+                <a href="../buildingABot/faq/smalltalk_faq.html">
+            
+                    
+                    Creating FAQ/smalltalk
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../buildingABot/faq/smalltalk_faq.html">
+            
+                <a href="../buildingABot/faq/smalltalk_faq.html#answers-to-frequently-asked-questions-and-common-cases">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../buildingABot/faq/smalltalk_faq.html">
+            
+                <a href="../buildingABot/faq/smalltalk_faq.html#smalltalk-with-chatbot">
+            
+                    
+                    Smalltalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../buildingABot/serviceInteractions/service_interactions.html">
+            
+                <a href="../buildingABot/serviceInteractions/service_interactions.html">
+            
+                    
+                    Editing service interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../buildingABot/testing/testing.html">
+            
+                <a href="../buildingABot/testing/testing.html">
+            
+                    
+                    Testing of chatbot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../buildingABot/setFacebookAd/set_facebook_ad.html">
+            
+                <a href="../buildingABot/setFacebookAd/set_facebook_ad.html">
+            
+                    
+                    Set up a Facebook ad
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">NLP</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="understanding.html">
+            
+                <a href="understanding.html">
+            
+                    
+                    Basic concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="advancedNlp.html">
+            
+                <a href="advancedNlp.html">
+            
+                    
+                    Building the training data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Building the training data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="advanced-nlp-training-data-building"><a name="advanced-nlp-training-data-building" class="plugin-anchor" href="#advanced-nlp-training-data-building"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced NLP: training data building</h1>
+<h2 id="avoid-missleading-intent-names"><a name="avoid-missleading-intent-names" class="plugin-anchor" href="#avoid-missleading-intent-names"><i class="fa fa-link" aria-hidden="true"></i></a>Avoid missleading intent names</h2>
+<p>Keeping the intent name understandable is a part of success. <strong>There&apos;s always someone, who&apos;ll continue in your work.</strong></p>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">advice:</span> how much make a chatbot
+<span class="hljs-attr">advice:</span> how to build a bot
+<span class="hljs-attr">duration:</span> how much time it takes to build a bot
+<span class="hljs-attr">duration:</span> how does it take to make a chatbot
+<span class="hljs-attr">long:</span> how long the message should be
+<span class="hljs-attr">long:</span> what is the best length of text message
+</code></pre>
+<p>Also categorization of intents helps a lot.</p>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">faq-howToMakeBot:</span> how much make a chatbot
+<span class="hljs-attr">faq-howToMakeBot:</span> how to build a bot
+<span class="hljs-attr">faq-buildDuration:</span> how much time it takes to build a bot
+<span class="hljs-attr">faq-buildDuration:</span> how does it take to make a chatbot
+<span class="hljs-attr">conversation-bestTextLength:</span> how long the message should be
+<span class="hljs-attr">conversation-bestTextLength:</span> what is the best length of text message
+</code></pre>
+<h2 id="avoid-general-intents"><a name="avoid-general-intents" class="plugin-anchor" href="#avoid-general-intents"><i class="fa fa-link" aria-hidden="true"></i></a>Avoid general intents</h2>
+<p>Putting all utterances which leads into the same answer under a same intent is a very common mistake.</p>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">aboutCats:</span> how much a cat eats
+<span class="hljs-attr">aboutCats:</span> how much food a cat consumes
+<span class="hljs-attr">aboutCats:</span> how much a cat weights
+<span class="hljs-attr">aboutCats:</span> how many kilos a cat has
+</code></pre>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">howMuchCatEats:</span> how much a cat eats
+<span class="hljs-attr">howMuchCatEats:</span> how much food a cat consumes
+<span class="hljs-attr">howMuchCatWeights:</span> how much a cat weights
+<span class="hljs-attr">howMuchCatWeights:</span> how many kilos a cat has
+</code></pre>
+<h2 id="try-to-mix-long-and-short-utterances"><a name="try-to-mix-long-and-short-utterances" class="plugin-anchor" href="#try-to-mix-long-and-short-utterances"><i class="fa fa-link" aria-hidden="true"></i></a>Try to mix long and short utterances</h2>
+<p>Some people are more expressive, some not. Make the NLP usable for the both groups.</p>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">howMuchCatEats:</span> how much a cat eats
+<span class="hljs-attr">howMuchCatEats:</span> how much food a cat consumes
+<span class="hljs-attr">howMuchCatEats:</span> what quantity of food the cat eats
+<span class="hljs-attr">howMuchCatWeights:</span> cat weight
+<span class="hljs-attr">howMuchCatWeights:</span> cat kilos
+</code></pre>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">howMuchCatEats:</span> how much a cat eats
+<span class="hljs-attr">howMuchCatEats:</span> how much food a cat consumes
+<span class="hljs-attr">howMuchCatEats:</span> what quantity of food the cat eats
+<span class="hljs-attr">howMuchCatEats:</span> cat food quantity
+<span class="hljs-attr">howMuchCatEats:</span> cat food consupmtion
+<span class="hljs-attr">howMuchCatWeights:</span> how much a cat weights
+<span class="hljs-attr">howMuchCatWeights:</span> how many kilos a cat has
+<span class="hljs-attr">howMuchCatWeights:</span> cat weight
+<span class="hljs-attr">howMuchCatWeights:</span> cat kilos
+</code></pre>
+<h2 id="avoid-missleading-words-in-intent-utterances"><a name="avoid-missleading-words-in-intent-utterances" class="plugin-anchor" href="#avoid-missleading-words-in-intent-utterances"><i class="fa fa-link" aria-hidden="true"></i></a>Avoid missleading words in intent utterances</h2>
+<p>Misleading words in combination with a disproportion between intents results in suprising false-positive intent recognition.</p>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatTimeIsIt:</span> please tell me, what time is
+<span class="hljs-attr">whatTimeIsIt:</span> hello, can you tell me, what time do you have
+<span class="hljs-attr">whatTimeIsIt:</span> I<span class="hljs-string">&apos;am wondering, what could be hours
+whatTimeIsIt: where is my watch
+whatTimeIsIt: oh no, I completely lost track of time
+</span></code></pre>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatTimeIsIt:</span> what time is it
+<span class="hljs-attr">whatTimeIsIt:</span> tell me, what time is
+<span class="hljs-attr">whatTimeIsIt:</span> what time do you have
+<span class="hljs-attr">whatTimeIsIt:</span> what could be hours
+</code></pre>
+<h2 id="avoid-disproportion-between-intents"><a name="avoid-disproportion-between-intents" class="plugin-anchor" href="#avoid-disproportion-between-intents"><i class="fa fa-link" aria-hidden="true"></i></a>Avoid disproportion between intents</h2>
+<p>Disproportions makes a single intent much more likely to be false-positive matched.</p>
+<ul>
+<li>all intents should have <strong>similar number of utterances</strong><ul>
+<li>largest intent should have twice as many utterances than the smallest</li>
+<li>good numbers of utterances are 6-12 for simple bots, 12-24 for more sophisticated bots</li>
+</ul>
+</li>
+<li><strong>distribute common phrases over all intents</strong></li>
+</ul>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whereIsATiger:</span> where is a tiger
+<span class="hljs-attr">whereIsATiger:</span> tiger where
+<span class="hljs-attr">whereIsFoodCourt:</span> where can i find a foodcourt
+<span class="hljs-attr">whereIsFoodCourt:</span> how to get to foodcourt
+<span class="hljs-attr">whereIsFoodCourt:</span> where the food court is?
+<span class="hljs-attr">whereIsFoodCourt:</span> where is a food court?
+<span class="hljs-attr">whereIsFoodCourt:</span> foodcourt where?
+</code></pre>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whereIsATiger:</span> where is a tiger
+<span class="hljs-attr">whereIsATiger:</span> tiger where
+<span class="hljs-attr">whereIsATiger:</span> where can i find a tiger
+<span class="hljs-attr">whereIsATiger:</span> how to get to tigers cage
+<span class="hljs-attr">whereIsATiger:</span> where the tiger is
+<span class="hljs-attr">whereIsFoodCourt:</span> where can i find a foodcourt
+<span class="hljs-attr">whereIsFoodCourt:</span> how to get to foodcourt
+<span class="hljs-attr">whereIsFoodCourt:</span> where the food court is
+<span class="hljs-attr">whereIsFoodCourt:</span> where is a food court
+<span class="hljs-attr">whereIsFoodCourt:</span> foodcourt where
+</code></pre>
+<h2 id="solving-a-problem-with-lot-of-synonyms-for-a-single-meaning"><a name="solving-a-problem-with-lot-of-synonyms-for-a-single-meaning" class="plugin-anchor" href="#solving-a-problem-with-lot-of-synonyms-for-a-single-meaning"><i class="fa fa-link" aria-hidden="true"></i></a>Solving a problem with lot of synonyms for a single meaning</h2>
+<p>If there is a word with many synonyms spread all around the bot&apos;s thraining data, it&apos;s good to identify the word soon and replace it with an entity.</p>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatIsCorona:</span> what is a corona virus
+<span class="hljs-attr">whatIsCorona:</span> what is a covid<span class="hljs-bullet">-19</span>
+<span class="hljs-attr">whatIsCorona:</span> more info about covid<span class="hljs-bullet">-19</span>
+<span class="hljs-attr">treatment:</span> how the virus is treated
+<span class="hljs-attr">treatment:</span> how the covid19 is treated
+<span class="hljs-attr">treatment:</span> treatment of corona
+</code></pre>
+<ul>
+<li>by intoducing an entity called <strong>@virus</strong>, we can <strong>simplify all training data</strong>.</li>
+<li>the entity <strong>does not need to be included in interaction conditions</strong></li>
+</ul>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (@entity: value [synonyms, ...])</span>
+@virus: covid19 [corona virus, covid<span class="hljs-bullet">-19</span>, corona, the virus, virus, covid virus]
+
+<span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatIsCorona:</span> what is a @virus
+<span class="hljs-attr">whatIsCorona:</span> more info about @virus
+<span class="hljs-attr">treatment:</span> how the @virus is treated
+<span class="hljs-attr">treatment:</span> treatment of @virus
+</code></pre>
+<h2 id="solving-a-problem-with-similar-intents---merging-them"><a name="solving-a-problem-with-similar-intents---merging-them" class="plugin-anchor" href="#solving-a-problem-with-similar-intents---merging-them"><i class="fa fa-link" aria-hidden="true"></i></a>Solving a problem with similar intents - Merging them</h2>
+<p>If there are many similar intents and</p>
+<ul>
+<li>the only difference is a meaning of single word</li>
+<li>the answer differs depending on that word</li>
+</ul>
+<p><strong>bad</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatIsScrewdriver:</span> what is a screwdriver
+<span class="hljs-attr">whatIsScrewdriver:</span> tell me about screwdrivers
+<span class="hljs-attr">whatIsHammer:</span> what is a hammer
+<span class="hljs-attr">whatIsHammer:</span> tell me about hammers
+<span class="hljs-attr">whatIsWarranty:</span> what is a warranty
+<span class="hljs-attr">whatIsWarranty:</span> tell me about warranty
+</code></pre>
+<p>The solution is to <strong>introduce an entity or more entities</strong></p>
+<p><strong>good</strong></p>
+<pre><code class="lang-yaml"><span class="hljs-comment"># (@entity: value [synonyms, ...])</span>
+@product: screwdriver [screwdrivers, turnscrew, worm-screw]
+          hammer [hammers]
+@service: warranty [warranties, return policy]
+
+<span class="hljs-comment"># (intent: utterance)</span>
+<span class="hljs-attr">whatIs:</span> what is a @product
+<span class="hljs-attr">whatIs:</span> what is the @product
+<span class="hljs-attr">whatIs:</span> tell me about @product
+</code></pre>
+<p>And then you have to <strong>use entity condition at each interaction</strong>.</p>
+<p><img src="condition-3.png" alt="condition"></p>
+<h2 id="adding-a-new-utterance-or-intent"><a name="adding-a-new-utterance-or-intent" class="plugin-anchor" href="#adding-a-new-utterance-or-intent"><i class="fa fa-link" aria-hidden="true"></i></a>Adding a new utterance or intent</h2>
+<p>Let&apos;s have a new utterance <code>say hello</code> and the bot now does not understand it.</p>
+<ol>
+<li><p><strong>find an answer interaction, and check if there is already an intent</strong></p>
+<p> <img src="condition.png" alt="condition"></p>
+<p> If the right interaction does not exist, you&apos;ll have to create it.</p>
+</li>
+<li><p><strong>if the intent exists, ensure your utterance is similar to other utterances</strong></p>
+<p> If the intent has a different meaning, but the answer is same - <strong>add a new intent - the answer can be distinguished later.</strong></p>
+<p> <img src="condition-matches.png" alt="matches"></p>
+</li>
+<li><p><strong>use the NLP trainer to look for possible conflicting intents</strong></p>
+<p> There already can be an intent you&apos;re looking for. Scroll down on discover all matched intents.</p>
+<p> <img src="trainer-question.png" alt="trainer"></p>
+</li>
+<li><p><strong>if there is a intent recognized, check the connected interaction is the answer for your question</strong></p>
+<p> <img src="matching-interactions.png" alt="matching interactions"></p>
+</li>
+</ol>
+<style>
+.hljs-attr { font-weight: bold; }
+</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="troubleshooting.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Troubleshooting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Building the training data","level":"3.3","depth":1,"previous":{"title":"Troubleshooting","level":"3.2","depth":1,"path":"nlp/troubleshooting.md","ref":"nlp/troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors","highlight"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"yaml","name":"Yaml","default":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"nlp/advancedNlp.md","mtime":"2020-03-24T12:50:32.129Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-24T12:50:36.716Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
