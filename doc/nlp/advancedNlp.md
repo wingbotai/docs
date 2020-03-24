@@ -94,7 +94,7 @@ Misleading words in combination with a disproportion between intents results in 
 # (intent: utterance)
 whatTimeIsIt: please tell me, what time is
 whatTimeIsIt: hello, can you tell me, what time do you have
-whatTimeIsIt: I'am wondering, what could be hours
+whatTimeIsIt: I`am wondering, what could be hours
 whatTimeIsIt: where is my watch
 whatTimeIsIt: oh no, I completely lost track of time
 ```
