@@ -120,6 +120,8 @@ Disproportions makes a single intent much more likely to be false-positive match
 
 **bad**
 
+the intent `whereIsATiger` has just short utterances and the intent `whereIsFoodCourt` only long utterances
+
 ```yaml
 # (intent: utterance)
 whereIsATiger: where is a tiger
@@ -150,7 +152,7 @@ whereIsFoodCourt: foodcourt where
 
 ## Solving a problem with lot of synonyms for a single meaning
 
-If there is a word with many synonyms spread all around the bot's thraining data, it's good to identify the word soon and replace it with an entity.
+If there is a word with many synonyms spread all around the bot's training data, it's good to identify the word soon and replace it with an entity.
 
 **bad**
 
