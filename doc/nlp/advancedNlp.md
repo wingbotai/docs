@@ -54,6 +54,24 @@ howMuchCatWeights: how much a cat weights
 howMuchCatWeights: how many kilos a cat has
 ```
 
+## Entities: Provide as much synonyms as possible
+
+Recognition of entities can be little bit tricky. Add as much synonyms as possible. Also common misspels helps a lot.
+
+**bad**
+
+```yaml
+# (@entity: value [synonyms, ...])
+@salutation: bro [brother]
+```
+
+**good**
+
+```yaml
+# (@entity: value [synonyms, ...])
+@salutation: bro [brother, broo, broo, brotha]
+```
+
 ## Try to mix long and short utterances
 
 Some people are more expressive, some not. Make the NLP usable for the both groups.
