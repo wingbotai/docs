@@ -4,7 +4,7 @@
 
 Breadcrumb is a snippet that allows you to send user back to a certain point in conversation that he must not start the chatbot flow from the beginning. 
 
-This is suitable technique for example in the situation when user is in the middle of the conversation, forgets about the chatbot and you remind yourself with a notification. If you use breadcrumbs snippet, user could start again on the very same point where he left off the conversation.
+This is suitable technique for example in the situation when user is in the middle of the conversation, forgets about the chatbot and you remind yourself with a notification. If you use breadcrumbs snippet, user could start again on the very same point where he left off the conversation. Haha
 
 **How to insert a breadcrumb**
 
