@@ -12,17 +12,18 @@ Putting a breadcrumb is fairly easy:
 
 1. In the specific interaction, choose from the drop-up menu "Snippet"
 
-*breadcrumbs_1.png*
+![Choosing the right snippet](breadcrumbs_1.png)
+
 
 2. From the drop-down menu choose "Put a breadcrumb"
 
-*breadcrumbs_2.png*
+![Choosing the right snippet](breadcrumbs_2.png)
 
 3. Push the button "Use"
 
-4. Now your breadcrumb is ready to use. Last thing you need to do is to drag the snippet and move it to the very bottom of the interaction
+4. Now your breadcrumb is ready to use. Last thing you need to do is to drag the snippet and move it to the very top of the interaction
 
-*breadcrumbs_3.png*
+![Snippet is ready to use](breadcrumbs_3.png)
 
 Insert breadcrumbs to all interactions that could be useful.
 
@@ -32,16 +33,16 @@ We continue with creating an interaction that will send user to the last breadcr
 
 Process is similar to the one with inserting breadcrumbs. You only choose "Go to last breadcrumb".
 
-*breadcrumbs_4.png*
+![Go to the last breadcrumb snippet](breadcrumbs_4.png)
 
 With this snippet, interaction will look like this:
 
-*breadcrumbs_5.png*
+![Go to the last breadcrumb snippet](breadcrumbs_5.png)
 
 Now let's see what breadcrumbs do.
 
 Look at this conversation:
 
-*breadcrumbs_6.png*
+![How breadcrumbs work](breadcrumbs_6.png)
 
 Step one has a breadcrumb, but Step 1.1 hasn't. If we proceed in the conversation further to Step 2 and push button Back (which is sending user to the last breadcrumb), this button send us back to the last breadcrumb, which is in Step 1.
