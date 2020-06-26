@@ -1,77 +1,58 @@
-# Sending notifications
+# Returning user to chatbot after some period of inactivity
 
-One of the many features, that Wingbot offers is a possibility to send notfications to users. This feature will appreciate those who are designing a step-by-step chatbot. 
+Sometimes designers can lose users in the procedure of their chatbot. Something might distract the user - a phone call, his children running around, a colleague asking for help. Or maybe he just doesn't have time to chat at the moment.
 
-For example you can explain some process or procedure and each step is described in one interaction.
+![User got distracted](notification_1.gif)
 
-Other step-by-step type chatbot might be a lead generating type of chatbot. In a step-by-step part of the conversation you are asking user to give you his personal data.
+There is a possibility to send one-time notification to the user in a 24-hour window after his last interaction so that you return the user where he dropped out. As it is your only possibility to contact users, this Notification conversation should be short, funny, and catchy.
 
-In both cases you want that user finish the conversation till the end. But what if user got distracted - a phone call, his children running around, collegue asking for a help? What if he just doesn't have time to chat at the moment?
+![Notification should be short and funny](notification_2.gif)
 
-In Designer, you can notify an user and try to put him back, where he left off.
+**Designing Notification dialogue**
 
-**2. New rules of Facebook notifications** 
+First, create new dialogue and name it Notification (but you can choose whatever name you like). Write 4 or 5 steps dialogue and at the end ask the user if he wants to continue with the process.
 
-Before we dive into this issue, let's describe some of the changes that happened recently. Since March 2020 Facebook tightened their policies toward chatbots. With those new rules businesses will have only 24 hours window to contact user and only with one message. Outside this time span you are unable to contact user directly.
+![Ask user if he wants to continue where he left off](notification_3.gif)
 
-You can find more information about Facebook policy towards chatbots here >> https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/
+> In another guide, we explained, how breadcrumbs work. So put breadcrumbs everywhere, where you might lose users and want to put him back.
 
-**3. How to start a conversation with notification.**
+For example, when you are explaining something to a user, you could want to put him back in the last step that he read. Or maybe you are trying to get contact from a user and he already gave you his name. So you don't want to ask him again and put him directly to subsequent questions.
 
-As we explained chatbot designers have one and only possibility to send just one notification to users. So you should put a maximum effort in designing it to capture users attention and persuade them to respond you. 
+So at the end of Notification dialogue insert an interaction that will put the user back to the last interaction he visited.
 
-Conversation migh start with a joke. It might be funnny in another way. It should be short and catchy. 
-
-In 4 or 5 steps ask user if he wants to continue with the process.
-
-![Choosing the right snippet](08.png)
-
-![Choosing the right snippet](02.png)
-
-![Choosing the right snippet](03.png)
-
-**4. Using breadcrumbs**
-
-Now to the technical part. To have things more in order we suggest that you create new dialogue and name it Notification.
-
-In other guide, we explained, how breadcrumbs work. So put breadcrumbs everywhere, where you might loose user and want to put him back.
-
-![Choosing the right snippet](04.png)
-
-> For example when you are explaining user something, you could want to put him back in the last step that he read. Or maybe you are trying to get contact from a user and he gave you already his name. So you don't want to ask him again and put him directly to subsequent question.
-
-So at the end of Notification dialogue insert an interaction that will put user back to the last interaction he visited.
-
-![Choosing the right snippet](05.png)
-
-Then the conversation continues with following:
-
-![Choosing the right snippet](09.png)
+![Putting user back](notification_4.png)
 
 **Targeting relevant users**
 
-Another thing you should keep in mind is that you want to send notification only to relevant users. That means only to those who started chatting with your chatbot but at the same time you want to leave out those, who already finished the procedure.
+Another very important thing is that you should target only relevant users. To ensure that, use tags. 
 
-To achieve this, you can tag users that have visited certain interactions. We suggest that you insert one tag at the beginning of the whole chatbot - put a tag to a second interaction of your chatbot, so that you filter those who just opened your chatbot and didn't take any action.
+Tags can be inserted like this.
 
-![Choosing the right snippet](07.png)
+![Inserting tags](notification_5.gif)
 
-Put a second tag to the end of a procedure - when you have all the personal data you want or when user finished the procedure.
+Insert one tag at the second interaction (so that you are sure that you capture users that started the conversation). And second tag to the end of the conversation so that you avoid those, who finished your chatbot procedure.
 
-![Choosing the right snippet](06.png)
+![Inserting tag at the end](notification_6.png)
 
-**Setting up a campaign in Designer**
+**Setting up a campaign**
 
-Now as you have your conversation ready it is time to set up a campaign. You can find Campaigns in **Ads&Audience** section of the Designer.
+Now as you have your conversation ready it is time to set up a campaign. You can find Campaigns in the Ads & Audience section of the Designer. Now let’s dive into all the parameters, you can choose in campaign setting:
 
-First name your campaign. In the next step you choose to which interaction should notification lead. 
+Campaign specification
+- Campaign name - pretty self-explanatory
+- Campaign action - where the campaign should lead
+- Active - tick it, if you want your campaign to be active right away
+- Allow repeated delivery - this option will secure that one user will receive this notification only once
+- Do not send the message when the user is out of the 24h window - this option should help you with the 24h window on Facebook we mentioned at the beginning
+- Automatically run after a certain time of user inactivity - with this option you can select after which period of user inactivity you will send notification
 
-As we mentioned at the beginning, Facebook changed its rules so tick an option Do not sent the message, when a user is out of the 24h window.
+Target audience
+- Include tags - in this option, you can choose which audience you want to target (see above)
+- Exclude tags - with this option you can specify, what audience you want to exclude (for example users that finished procedure)
+- Target only single page - one chatbot can be connected to multiple Facebook pages, with this option, you restrict sending a notification to only on a selected one
 
-Next you choose which people chatbot should target with the Notification (as mentioned in the previous step).
+![Setting up a campaign](notification_7.png)
 
-![Choosing the right snippet](10.png)
+As you will have all the necessary things set up, just save what you did. Your notification is now ready to launch. Once you activate it, you can track its performance.
 
-**6. How to test if your notification is ready to use**
-
-Before you publish your chatbot you should be sure that you set up your notification correctly. To ensure this, you might test it on Staging snapshot. Try to copy your Notification on Staging. Then test your chatbot on Staging and wait if a notification occurs.
+![Tracking performance](notification_8.png)
