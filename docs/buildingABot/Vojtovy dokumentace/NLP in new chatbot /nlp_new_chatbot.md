@@ -20,7 +20,7 @@ You can do it directly in the Designer, but for the bigger picture, we suggest t
 
 After you come up with all the intents, export this table to CSV as you can import this sheet directly to Designer after.
 
-#tady potrebujeme vyresit import @david
+![Preparation in sheet](nlp_new_chatbot_3.gif)
 
 **Dealing with intent collisions**
 
