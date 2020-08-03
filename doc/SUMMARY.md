@@ -9,17 +9,29 @@
 
 ## Getting started with wingbot.ai
 
-* [Creating dialogue](buildingABot/createDialogue/create_dialogue.md)
+* [First dialogue](buildingABot/createDialogue/create_dialogue.md)
     * [First interaction](buildingABot/createDialogue/create_dialogue.md#create-basic-dialogue-with-interaction)
     * [First intent handler](buildingABot/createDialogue/create_dialogue.md#handle-user-responses)
     * [First quick reply](buildingABot/createDialogue/create_dialogue.md#quick-replies-of-user)
-* [Building audience](buildingABot/buildingAudience/building_audience.md)
-* [Creating FAQ/smalltalk](buildingABot/faq/smalltalk_faq.md)
+* [Simple FAQ and smalltalk](buildingABot/faq/smalltalk_faq.md)
     * [FAQ](buildingABot/faq/smalltalk_faq.md#answers-to-frequently-asked-questions-and-common-cases)
     * [Smalltalk](buildingABot/faq/smalltalk_faq.md#smalltalk-with-chatbot)
-* [Editing service interactions](buildingABot/serviceInteractions/service_interactions.md)
-* [Testing of chatbot](buildingABot/testing/testing.md)
+<!-- * [Service interactions](buildingABot/serviceInteractions/service_interactions.md) -->
+* [Run a testing bot](buildingABot/testing/testing.md)
+
+## Variables and conversation state
+
+* [Setting a variable](conversationPatterns/settingVariable/settingVariable.md)
+* [Using a variable in text](conversationPatterns/usingTheVariableInText/usingTheVariableInText.md)
+
+## Marketing and Audiences
+
+* [Building audience](buildingABot/buildingAudience/building_audience.md)
 * [Set up a Facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
+
+## Advanced conversations
+
+* [Slot filling](conversationPatterns/slotFilling/slotFilling.md)
 
 ## NLP
 
