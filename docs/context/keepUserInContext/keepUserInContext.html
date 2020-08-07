@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Using a variable in text · Wingbot.ai</title>
+        <title>Keep user in dialogue · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../buildingABot/buildingAudience/building_audience.html" />
+    <link rel="next" href="../AnswerTheQuestion/AnswerTheQuestion.html" />
     
     
-    <link rel="prev" href="../settingVariable/settingVariable.html" />
+    <link rel="prev" href="../../conversationPatterns/slotFilling/slotFilling.html" />
     
 
     </head>
@@ -264,9 +264,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../settingVariable/settingVariable.html">
+        <li class="chapter " data-level="3.1" data-path="../../conversationPatterns/settingVariable/settingVariable.html">
             
-                <a href="../settingVariable/settingVariable.html">
+                <a href="../../conversationPatterns/settingVariable/settingVariable.html">
             
                     
                     Setting a variable
@@ -277,9 +277,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="usingTheVariableInText.html">
+        <li class="chapter " data-level="3.2" data-path="../../conversationPatterns/usingTheVariableInText/usingTheVariableInText.html">
             
-                <a href="usingTheVariableInText.html">
+                <a href="../../conversationPatterns/usingTheVariableInText/usingTheVariableInText.html">
             
                     
                     Using a variable in text
@@ -330,9 +330,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../slotFilling/slotFilling.html">
+        <li class="chapter " data-level="5.1" data-path="../../conversationPatterns/slotFilling/slotFilling.html">
             
-                <a href="../slotFilling/slotFilling.html">
+                <a href="../../conversationPatterns/slotFilling/slotFilling.html">
             
                     
                     Slot filling
@@ -343,9 +343,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../../context/keepUserInContext/keepUserInContext.html">
+        <li class="chapter active" data-level="5.2" data-path="keepUserInContext.html">
             
-                <a href="../../context/keepUserInContext/keepUserInContext.html">
+                <a href="keepUserInContext.html">
             
                     
                     Keep user in dialogue
@@ -356,9 +356,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../../context/AnswerTheQuestion/AnswerTheQuestion.html">
+        <li class="chapter " data-level="5.3" data-path="../AnswerTheQuestion/AnswerTheQuestion.html">
             
-                <a href="../../context/AnswerTheQuestion/AnswerTheQuestion.html">
+                <a href="../AnswerTheQuestion/AnswerTheQuestion.html">
             
                     
                     Force user to answer
@@ -369,9 +369,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="../../context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
+        <li class="chapter " data-level="5.4" data-path="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
             
-                <a href="../../context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
+                <a href="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
             
                     
                     Chance to correct an answer
@@ -382,9 +382,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="../../context/HelpersForKeepingUserInContext/snippetsForContext.html">
+        <li class="chapter " data-level="5.5" data-path="../HelpersForKeepingUserInContext/snippetsForContext.html">
             
-                <a href="../../context/HelpersForKeepingUserInContext/snippetsForContext.html">
+                <a href="../HelpersForKeepingUserInContext/snippetsForContext.html">
             
                     
                     Advanced context snippets
@@ -471,7 +471,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Using a variable in text</a>
+        <a href="../.." >Keep user in dialogue</a>
     </h1>
 </div>
 
@@ -486,46 +486,81 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="using-variable-in-bots-response"><a name="using-variable-in-bots-response" class="plugin-anchor" href="#using-variable-in-bots-response"><i class="fa fa-link" aria-hidden="true"></i></a>Using variable in bot`s response</h1>
-<p>You can use variable value anywhere in chatbot texts by using <code>{{name of variable}}</code>. For example, when you want to tell the final score:</p>
-<p><img src="image_1.png" alt="score"></p>
-<p>Examples: text in designer <code>You have {{score}} points.</code></p>
-<p>Example 1</p>
+                                <h1 id="keep-the-user-in-the-context"><a name="keep-the-user-in-the-context" class="plugin-anchor" href="#keep-the-user-in-the-context"><i class="fa fa-link" aria-hidden="true"></i></a>Keep the user in the context</h1>
+<p>The designer provides 3 layers of context:</p>
 <ul>
-<li>Variable value: score = 3</li>
-<li>Result is: <strong>You have 3 points.</strong></li>
+<li><a href="##Context-of-interaction"><strong>Interaction</strong></a> - a group of actions which are made during the reaction of the bot.</li>
+<li><a href="##Context-of-dialogue"><strong>Dialogue</strong></a> - a group of interactions. Something like a folder for files</li>
+<li><a href="##Global-context"><strong>Global</strong></a> - the whole bot</li>
 </ul>
-<p>Example 2</p>
+<p>A really important part of the context is <strong>fallback</strong> - the interaction, which solves situations:</p>
 <ul>
-<li>Variable value: score was not set</li>
-<li>Result is: <strong>You have points.</strong></li>
+<li>When NLU does not understand.</li>
+<li>Was not found another suitable interaction for a reaction of the bot.</li>
 </ul>
-<h2 id="simple-conditions-variable-may-not-exists"><a name="simple-conditions-variable-may-not-exists" class="plugin-anchor" href="#simple-conditions-variable-may-not-exists"><i class="fa fa-link" aria-hidden="true"></i></a>Simple conditions: Variable may not exists</h2>
-<p>You can use conditions in text to handle this case. The syntax is 
-<code>{{#if name of variable}}</code> &#x2026; <code>{{else}}</code> ... <code>{{/if}}</code></p>
-<p>Take a look at <a href="https://handlebarsjs.com/guide/builtin-helpers.html#if" target="_blank">documentation</a> to use <code>{{if}}</code> properly. The opposite condition is <code>{{#unless}}</code> - specification is <a href="https://handlebarsjs.com/guide/builtin-helpers.html#unless" target="_blank">there</a>.</p>
-<p>Now we can upgrade text for result of score:</p>
-<p><img src="image_1.png" alt="upgraded score"></p>
-<p>Examples: text in designer <code>{{#if score}} You have {{score}} points.{{else}}You don&apos;t have a point yet. &#x1F614;{{/if}}</code></p>
-<p>Example 1</p>
+<h2 id="global-context"><a name="global-context" class="plugin-anchor" href="#global-context"><i class="fa fa-link" aria-hidden="true"></i></a>Global context</h2>
+<p>This context includes whole bot&apos;s interactions.</p>
 <ul>
-<li>Variable value: score = 3</li>
-<li>Result is: <strong>You have 3 points.</strong></li>
+<li>More about global fallback is in the chapter of <a href="buildingABot/serviceInteractions/service_interactions.md">service interactions</a>.</li>
+<li>How to work with interactions with NLP on input is described <a href="buildingABot/faq/smalltalk_faq.md#answers-to-frequently-asked-questions-and-common-cases">here</a>.</li>
 </ul>
-<p>Example 2</p>
+<h2 id="context-of-dialogue"><a name="context-of-dialogue" class="plugin-anchor" href="#context-of-dialogue"><i class="fa fa-link" aria-hidden="true"></i></a>Context of dialogue</h2>
+<p>This kind of context can be really helpful in situations when you need to <strong>keep the user on topic</strong>. And you use one dialogue for this topic.</p>
+<h3 id="interactions-just-for-the-context-of-dialogue"><a name="interactions-just-for-the-context-of-dialogue" class="plugin-anchor" href="#interactions-just-for-the-context-of-dialogue"><i class="fa fa-link" aria-hidden="true"></i></a>Interactions just for the context of dialogue</h3>
+<p>Our dialogue includes interactions and they can have NLP conditions on input. Sometimes the phrase used in NLP condition is too general and we know the meaning from the context. For this case, the designer provides opportunity set this NLP condition executable just in this dialogue. So the phrase will be used when the user is in any interaction of this dialogue. </p>
+<h4 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h4>
 <ul>
-<li>Variable value: score was not set</li>
-<li>Result is: <strong>You don&apos;t have a point yet. &#x1F614;</strong></li>
+<li><strong>Dialogue: about Jupiter</strong></li>
+<li>User last interaction: general interaction about Jupiter in dialogue about Jupiter</li>
+<li>User asks: <strong>&quot;How big is it?&#x201D;</strong> </li>
+<li>Result: <strong>Jupiter&apos;s width is 139,820 km</strong>.<blockquote>
+<p>Note: We know that the subject is &#x201C;Jupiter&#x201D; because we just talk about it. So we can answer without asking to subject.</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="advanced-iterating-through-array-of-values"><a name="advanced-iterating-through-array-of-values" class="plugin-anchor" href="#advanced-iterating-through-array-of-values"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced: Iterating through array of values</h2>
-<p>Variable type arrays or specific objects can have more values than one. You may need to iterate them to get whore result. In this case <code>{{#each}}</code> syntax will help you. Documentation is <a href="https://handlebarsjs.com/guide/builtin-helpers.html#each" target="_blank">there</a>.</p>
-<p>Examples: text in designer <code>Values are:{{#each myArray}}  {{myValue}} &#x1F642;,{{/each}}</code></p>
+<h3 id="set-up-interaction-with-nlp-conditions-just-for-the-dialogue"><a name="set-up-interaction-with-nlp-conditions-just-for-the-dialogue" class="plugin-anchor" href="#set-up-interaction-with-nlp-conditions-just-for-the-dialogue"><i class="fa fa-link" aria-hidden="true"></i></a>Set up interaction with NLP conditions just for the dialogue</h3>
+<p>You can switch condition to dialogue by <strong>clicking on the globe</strong> at the left of interaction&apos;s NLP detail - the result:</p>
+<p><img src="image_1.png" alt="gialogue intent"></p>
+<h3 id="dialogue-fallback"><a name="dialogue-fallback" class="plugin-anchor" href="#dialogue-fallback"><i class="fa fa-link" aria-hidden="true"></i></a>Dialogue fallback</h3>
+<p>Dialogues can have their own fallbacks. This helps you with missunderestandings - <strong>catch users before they leave the dialogue</strong>. This is very useful when the dialogue covers one topic.</p>
+<h4 id="set-up-dialogue-fallback"><a name="set-up-dialogue-fallback" class="plugin-anchor" href="#set-up-dialogue-fallback"><i class="fa fa-link" aria-hidden="true"></i></a>Set up dialogue fallback</h4>
+<p>You can add fallback on the input of interaction by clicking on * in intent set up of interaction.</p>
+<blockquote>
+<p>!!! Make sure, the interaction is last at the dialogue. </p>
+</blockquote>
+<p><img src="image_2.png" alt="dialogue fallback"></p>
+<h2 id="context-of-interaction"><a name="context-of-interaction" class="plugin-anchor" href="#context-of-interaction"><i class="fa fa-link" aria-hidden="true"></i></a>Context of interaction</h2>
+<p>You can do &#x201C;magic&#x201D; even in the context of interaction. It&apos;s possible to force users to answer the question ( take a look at the snippet <a href="../HelpersForKeepingUserInContext/snippetsForContext.html##snippet_keep_user_in_this_interaction_use_it_as_a_fallback">Keep user in this interaction (use it as a fallback)</a>). Or you can use the context of interaction very similarly as we used before in the context of dialogue. </p>
+<h4 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h4>
 <ul>
-<li>Variable value: myArray:[{myValue:1},{myValue:8}]</li>
-<li>Result is: <strong>Values are: 1 &#x1F642;, 8 &#x1F642;,</strong></li>
+<li>User last interaction: general interaction about Jupiter in dialogue about Jupiter</li>
+<li>User asks: <strong>&quot;How big is it?&#x201D;</strong> </li>
+<li>Result: <strong>Jupiter&apos;s width is 139,820 km</strong>.<blockquote>
+<p>Note: We can answer, because we know we just talk about Jupiter.</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="all-handlebars-templating-available"><a name="all-handlebars-templating-available" class="plugin-anchor" href="#all-handlebars-templating-available"><i class="fa fa-link" aria-hidden="true"></i></a>All handlebars templating available</h2>
-<p>You can use Handlebars resources for more examples and informations how to use it&#x2019;s templating features: <a href="https://handlebarsjs.com/guide/" target="_blank">https://handlebarsjs.com/guide/</a>. </p>
+<blockquote>
+<p>The difference between this example and the example in dialogue context:</p>
+<ul>
+<li><strong>Interaction context</strong>: you need to set the NLP handler in each interaction in dialogue.</li>
+<li><strong>Dialogue context</strong>: you set NLP input in one interaction with the answer at dialogue. <strong>You don&apos;t have to set NLP handlers in each interaction.</strong></li>
+</ul>
+</blockquote>
+<h3 id="from-the-interaction-to-the-global-fallback"><a name="from-the-interaction-to-the-global-fallback" class="plugin-anchor" href="#from-the-interaction-to-the-global-fallback"><i class="fa fa-link" aria-hidden="true"></i></a>From the interaction to the global fallback</h3>
+<p>There is the following <strong>order in dispatching</strong> a conversation event through all contexts:</p>
+<ol>
+<li><strong>NLP handlers on interaction</strong> - how to set them are described in this chapter</li>
+<li><strong>Interaction fallback</strong> - helps you hold the user before he leaves the interaction. For example, you can &#x201C;force&#x201D; the users to answer the question - instructions here.</li>
+<li><strong>Intents in the current dialogue</strong></li>
+<li><strong>Intents in other dialogues</strong></li>
+<li><strong>Fallback in the current dialogue</strong></li>
+<li><strong>Global fallback</strong> - in the Root dialogue</li>
+</ol>
+<blockquote>
+<p>The first matching rule is executed.</p>
+<p>Take a look how <strong>context snippets can help you</strong> <a href="../HelpersForKeepingUserInContext/snippetsFonContext.html">here</a>.</p>
+</blockquote>
 
                                 
                                 </section>
@@ -553,12 +588,12 @@
 
             
                 
-                <a href="../settingVariable/settingVariable.html" class="navigation navigation-prev " aria-label="Previous page: Setting a variable">
+                <a href="../../conversationPatterns/slotFilling/slotFilling.html" class="navigation navigation-prev " aria-label="Previous page: Slot filling">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../buildingABot/buildingAudience/building_audience.html" class="navigation navigation-next " aria-label="Next page: Building audience">
+                <a href="../AnswerTheQuestion/AnswerTheQuestion.html" class="navigation navigation-next " aria-label="Next page: Force user to answer">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -569,7 +604,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using a variable in text","level":"3.2","depth":1,"next":{"title":"Building audience","level":"4.1","depth":1,"path":"buildingABot/buildingAudience/building_audience.md","ref":"buildingABot/buildingAudience/building_audience.md","articles":[]},"previous":{"title":"Setting a variable","level":"3.1","depth":1,"path":"conversationPatterns/settingVariable/settingVariable.md","ref":"conversationPatterns/settingVariable/settingVariable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors","highlight"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"yaml","name":"Yaml","default":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"conversationPatterns/usingTheVariableInText/usingTheVariableInText.md","mtime":"2020-08-03T08:56:29.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T17:27:02.294Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Keep user in dialogue","level":"5.2","depth":1,"next":{"title":"Force user to answer","level":"5.3","depth":1,"path":"context/AnswerTheQuestion/AnswerTheQuestion.md","ref":"context/AnswerTheQuestion/AnswerTheQuestion.md","articles":[]},"previous":{"title":"Slot filling","level":"5.1","depth":1,"path":"conversationPatterns/slotFilling/slotFilling.md","ref":"conversationPatterns/slotFilling/slotFilling.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors","highlight"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"yaml","name":"Yaml","default":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"context/keepUserInContext/keepUserInContext.md","mtime":"2020-08-07T17:19:31.933Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T17:27:02.294Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Using a variable in text · Wingbot.ai</title>
+        <title>Advanced context snippets · Wingbot.ai</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../buildingABot/buildingAudience/building_audience.html" />
+    <link rel="next" href="../../nlp/understanding.html" />
     
     
-    <link rel="prev" href="../settingVariable/settingVariable.html" />
+    <link rel="prev" href="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html" />
     
 
     </head>
@@ -264,9 +264,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../settingVariable/settingVariable.html">
+        <li class="chapter " data-level="3.1" data-path="../../conversationPatterns/settingVariable/settingVariable.html">
             
-                <a href="../settingVariable/settingVariable.html">
+                <a href="../../conversationPatterns/settingVariable/settingVariable.html">
             
                     
                     Setting a variable
@@ -277,9 +277,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="usingTheVariableInText.html">
+        <li class="chapter " data-level="3.2" data-path="../../conversationPatterns/usingTheVariableInText/usingTheVariableInText.html">
             
-                <a href="usingTheVariableInText.html">
+                <a href="../../conversationPatterns/usingTheVariableInText/usingTheVariableInText.html">
             
                     
                     Using a variable in text
@@ -330,9 +330,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../slotFilling/slotFilling.html">
+        <li class="chapter " data-level="5.1" data-path="../../conversationPatterns/slotFilling/slotFilling.html">
             
-                <a href="../slotFilling/slotFilling.html">
+                <a href="../../conversationPatterns/slotFilling/slotFilling.html">
             
                     
                     Slot filling
@@ -343,9 +343,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../../context/keepUserInContext/keepUserInContext.html">
+        <li class="chapter " data-level="5.2" data-path="../keepUserInContext/keepUserInContext.html">
             
-                <a href="../../context/keepUserInContext/keepUserInContext.html">
+                <a href="../keepUserInContext/keepUserInContext.html">
             
                     
                     Keep user in dialogue
@@ -356,9 +356,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../../context/AnswerTheQuestion/AnswerTheQuestion.html">
+        <li class="chapter " data-level="5.3" data-path="../AnswerTheQuestion/AnswerTheQuestion.html">
             
-                <a href="../../context/AnswerTheQuestion/AnswerTheQuestion.html">
+                <a href="../AnswerTheQuestion/AnswerTheQuestion.html">
             
                     
                     Force user to answer
@@ -369,9 +369,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="../../context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
+        <li class="chapter " data-level="5.4" data-path="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
             
-                <a href="../../context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
+                <a href="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">
             
                     
                     Chance to correct an answer
@@ -382,9 +382,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="../../context/HelpersForKeepingUserInContext/snippetsForContext.html">
+        <li class="chapter active" data-level="5.5" data-path="snippetsForContext.html">
             
-                <a href="../../context/HelpersForKeepingUserInContext/snippetsForContext.html">
+                <a href="snippetsForContext.html">
             
                     
                     Advanced context snippets
@@ -471,7 +471,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Using a variable in text</a>
+        <a href="../.." >Advanced context snippets</a>
     </h1>
 </div>
 
@@ -486,46 +486,105 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="using-variable-in-bots-response"><a name="using-variable-in-bots-response" class="plugin-anchor" href="#using-variable-in-bots-response"><i class="fa fa-link" aria-hidden="true"></i></a>Using variable in bot`s response</h1>
-<p>You can use variable value anywhere in chatbot texts by using <code>{{name of variable}}</code>. For example, when you want to tell the final score:</p>
-<p><img src="image_1.png" alt="score"></p>
-<p>Examples: text in designer <code>You have {{score}} points.</code></p>
-<p>Example 1</p>
-<ul>
-<li>Variable value: score = 3</li>
-<li>Result is: <strong>You have 3 points.</strong></li>
+                                <h1 id="snippets-for-easy-work-with-context"><a name="snippets-for-easy-work-with-context" class="plugin-anchor" href="#snippets-for-easy-work-with-context"><i class="fa fa-link" aria-hidden="true"></i></a>Snippets for easy work with context</h1>
+<p>Wingbot provides you snippets which help you work with the context in fallbacks.</p>
+<p>You may know the situation when you ask a question and users don&apos;t answer - even worse, users ask their own question instead. What should your bot do now? There are some possibilities how to do it in wingbot designer and depend on you, what suits better for our case:</p>
+<ol>
+<li><strong>Loose context of interaction</strong><ul>
+<li><strong>Situation:</strong> The answer to your question is not important. You let the user go to another interaction and respond him properly.</li>
+<li><strong>What to use:</strong> nothing. This set up is the default.</li>
 </ul>
-<p>Example 2</p>
-<ul>
-<li>Variable value: score was not set</li>
-<li>Result is: <strong>You have points.</strong></li>
+</li>
+<li><strong>Use the force: Get the answer for bot&apos;s question</strong><ul>
+<li><strong>Situation:</strong> you really need the answer. Example: registration form.</li>
+<li><strong>What to use:</strong> Take a look at snippets <a href="#snippet_keep_user_in_this_interaction_use_it_as_a_fallback">Keep user in this interaction (use it as a fallback)</a> and <a href="#snippet_keep_previous_NLP_handlers_and_fallback_repeatedly">Keep previous NLP handlers and fallback (repeatedly)</a>.</li>
 </ul>
-<h2 id="simple-conditions-variable-may-not-exists"><a name="simple-conditions-variable-may-not-exists" class="plugin-anchor" href="#simple-conditions-variable-may-not-exists"><i class="fa fa-link" aria-hidden="true"></i></a>Simple conditions: Variable may not exists</h2>
-<p>You can use conditions in text to handle this case. The syntax is 
-<code>{{#if name of variable}}</code> &#x2026; <code>{{else}}</code> ... <code>{{/if}}</code></p>
-<p>Take a look at <a href="https://handlebarsjs.com/guide/builtin-helpers.html#if" target="_blank">documentation</a> to use <code>{{if}}</code> properly. The opposite condition is <code>{{#unless}}</code> - specification is <a href="https://handlebarsjs.com/guide/builtin-helpers.html#unless" target="_blank">there</a>.</p>
-<p>Now we can upgrade text for result of score:</p>
-<p><img src="image_1.png" alt="upgraded score"></p>
-<p>Examples: text in designer <code>{{#if score}} You have {{score}} points.{{else}}You don&apos;t have a point yet. &#x1F614;{{/if}}</code></p>
-<p>Example 1</p>
-<ul>
-<li>Variable value: score = 3</li>
-<li>Result is: <strong>You have 3 points.</strong></li>
+</li>
+<li><strong>In the middle - between option 1. and 2.</strong> <ul>
+<li><strong>Situation:</strong> Reaction to the user&apos;s question is more important if exists. Otherwise, keep the user in this interaction.</li>
+<li><strong>What to use:</strong> Take a look at snippet <a href="##snippet_respond_with_an_intent_bookmark">Respond with an intent (bookmark)</a>.</li>
 </ul>
-<p>Example 2</p>
-<ul>
-<li>Variable value: score was not set</li>
-<li>Result is: <strong>You don&apos;t have a point yet. &#x1F614;</strong></li>
+</li>
+<li><strong>Respond to the user and keep in mind previous context</strong><ul>
+<li><strong>Situation:</strong> You let user change the topic, but let the user correct the answer for previous question. Example: user make mistake at the answer and bot don&apos;t underestand (respond with fallback) - user can correct the answer.</li>
+<li><strong>What to use:</strong>  Take a look at snippet <a href="##snippet_Keep_previous_NLP_handlers_and_fallback_just_once">Keep previous NLP handlers and fallback (just once)</a>.</li>
 </ul>
-<h2 id="advanced-iterating-through-array-of-values"><a name="advanced-iterating-through-array-of-values" class="plugin-anchor" href="#advanced-iterating-through-array-of-values"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced: Iterating through array of values</h2>
-<p>Variable type arrays or specific objects can have more values than one. You may need to iterate them to get whore result. In this case <code>{{#each}}</code> syntax will help you. Documentation is <a href="https://handlebarsjs.com/guide/builtin-helpers.html#each" target="_blank">there</a>.</p>
-<p>Examples: text in designer <code>Values are:{{#each myArray}}  {{myValue}} &#x1F642;,{{/each}}</code></p>
+</li>
+</ol>
+<h2 id="snippet-keep-user-in-this-interaction-use-it-as-a-fallback"><a name="snippet-keep-user-in-this-interaction-use-it-as-a-fallback" class="plugin-anchor" href="#snippet-keep-user-in-this-interaction-use-it-as-a-fallback"><i class="fa fa-link" aria-hidden="true"></i></a>Snippet: Keep user in this interaction (use it as a fallback)</h2>
+<p><img src="image_1.gif" alt="conversation example"></p>
+<p><strong>Most used example: Get answer from users</strong></p>
 <ul>
-<li>Variable value: myArray:[{myValue:1},{myValue:8}]</li>
-<li>Result is: <strong>Values are: 1 &#x1F642;, 8 &#x1F642;,</strong></li>
+<li>At the interaction fallback to keep users at the interaction. Bot can give help to users and keep them in interaction. </li>
 </ul>
-<h2 id="all-handlebars-templating-available"><a name="all-handlebars-templating-available" class="plugin-anchor" href="#all-handlebars-templating-available"><i class="fa fa-link" aria-hidden="true"></i></a>All handlebars templating available</h2>
-<p>You can use Handlebars resources for more examples and informations how to use it&#x2019;s templating features: <a href="https://handlebarsjs.com/guide/" target="_blank">https://handlebarsjs.com/guide/</a>. </p>
+<p><strong>About the snippet:</strong></p>
+<ul>
+<li>Use this snippet for keeping fallback of this interaction (where the snippet is used). So the context stays in this interaction..</li>
+<li>This snippet does not keep NLP handles.</li>
+<li>The snippet is applied whenever the user gets to this point of conversation.</li>
+<li>Should be used in the fallback of the interaction to keep the interaction&apos;s context.</li>
+</ul>
+<p><strong>Take a look how to use this snippet:</strong> <a href="../AnswerTheQuestion/AnswerTheQuestion.html">here</a></p>
+<h2 id="snippet-keep-previous-nlp-handlers-and-fallback-repeatedly"><a name="snippet-keep-previous-nlp-handlers-and-fallback-repeatedly" class="plugin-anchor" href="#snippet-keep-previous-nlp-handlers-and-fallback-repeatedly"><i class="fa fa-link" aria-hidden="true"></i></a>Snippet: Keep previous NLP handlers and fallback (repeatedly)</h2>
+<p><strong>Most used example: Get answer from users with the same options of answers</strong></p>
+<ul>
+<li>At the interaction fallback to keep users at the interaction. Bot can give help to users and keep them in interaction. </li>
+<li>This snippet keeps previous NLP handlers.<blockquote>
+<p>This snippet is very similar to previous snippet Keep user in this interaction (use it as a fallback)]. The difference is you don&apos;t need to set NLP handlers.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>About the snippet:</strong></p>
+<ul>
+<li>Keeps previous NLP handlers and fallback.</li>
+<li>Where to use:<ul>
+<li>At the dialogue or global fallbacks - keep NLP handlers and fallback from previous interactions.</li>
+<li>At the interaction fallback - keep NLP handlers and fallback from this interaction (they are used again)</li>
+</ul>
+</li>
+<li>The snippet is applied whenever the user gets to this point of conversation.</li>
+</ul>
+<p><strong>Take a look how to use this snippet:</strong> <a href="AnswerTheQuestion/AnswerTheQuestion.html">here</a>)</p>
+<h2 id="snippet-keep-previous-nlp-handlers-and-fallback-just-once"><a name="snippet-keep-previous-nlp-handlers-and-fallback-just-once" class="plugin-anchor" href="#snippet-keep-previous-nlp-handlers-and-fallback-just-once"><i class="fa fa-link" aria-hidden="true"></i></a>Snippet: Keep previous NLP handlers and fallback (just once)</h2>
+<p><img src="image1.png" alt="conversation example"></p>
+<p><strong>Most used example: Give user chance to correct answer in fallback</strong></p>
+<ul>
+<li>At the dialogue or global fallback to keep the context of previous interaction just once. So the users can correct their reaction to chatbot&apos;s utterance.</li>
+</ul>
+<p><strong>About the snippet:</strong></p>
+<ul>
+<li>The snippet keeps previous NLP handlers and fallback.</li>
+<li>Where to use:<ul>
+<li>At the dialogue or global fallbacks - keep NLP handlers and fallback from a previous interaction.</li>
+<li>At the interaction fallback - keep NLP handlers and fallback from this interaction (they are used again).</li>
+</ul>
+</li>
+<li>This is done just once.</li>
+</ul>
+<p><strong>Take a look how to use this snippet:</strong> <a href="ChanceToCorrectAnswer/ChanceToCorrectAnswer.html">here</a>)</p>
+<h2 id="snippet-respond-with-an-intent-bookmark"><a name="snippet-respond-with-an-intent-bookmark" class="plugin-anchor" href="#snippet-respond-with-an-intent-bookmark"><i class="fa fa-link" aria-hidden="true"></i></a>Snippet: Respond with an intent (bookmark)</h2>
+<p><img src="image_2.gif" alt="conversation example 2"></p>
+<p><strong>Most used example: offtopic with keeping context</strong></p>
+<ul>
+<li>Bot reacts to oftopic question (is the bot knows the answer) and return user back to context of interaction.</li>
+</ul>
+<p><strong>About the snippet:</strong></p>
+<ul>
+<li>This snippet allows the reaction to intent in these situations:<ul>
+<li>If the intent&apos;s interaction is finished (goes to another interaction, shows &#x201C;ending&#x201D; format such as quick replies) the context stays in these interactions.</li>
+<li>If the intents&apos;s interaction is not finished the context returns to the point where the snippet was used.</li>
+</ul>
+</li>
+</ul>
+<p><strong>How to use it:</strong></p>
+<ol>
+<li>Prepare interaction with fallback (for example like we did there).</li>
+<li>Add this snippet to the beginning of interaction fallback.</li>
+</ol>
+<p><img src="image3.png" alt="conversation example"></p>
+<blockquote>
+<p>Take look <strong>how contexts works</strong> <a href="../keepUserInContext/keepUserInContext.html">here</a>.</p>
+</blockquote>
 
                                 
                                 </section>
@@ -553,12 +612,12 @@
 
             
                 
-                <a href="../settingVariable/settingVariable.html" class="navigation navigation-prev " aria-label="Previous page: Setting a variable">
+                <a href="../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html" class="navigation navigation-prev " aria-label="Previous page: Chance to correct an answer">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../buildingABot/buildingAudience/building_audience.html" class="navigation navigation-next " aria-label="Next page: Building audience">
+                <a href="../../nlp/understanding.html" class="navigation navigation-next " aria-label="Next page: Basic concepts">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -569,7 +628,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using a variable in text","level":"3.2","depth":1,"next":{"title":"Building audience","level":"4.1","depth":1,"path":"buildingABot/buildingAudience/building_audience.md","ref":"buildingABot/buildingAudience/building_audience.md","articles":[]},"previous":{"title":"Setting a variable","level":"3.1","depth":1,"path":"conversationPatterns/settingVariable/settingVariable.md","ref":"conversationPatterns/settingVariable/settingVariable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors","highlight"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"yaml","name":"Yaml","default":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"conversationPatterns/usingTheVariableInText/usingTheVariableInText.md","mtime":"2020-08-03T08:56:29.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T17:27:02.294Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Advanced context snippets","level":"5.5","depth":1,"next":{"title":"Basic concepts","level":"6.1","depth":1,"path":"nlp/understanding.md","ref":"nlp/understanding.md","articles":[]},"previous":{"title":"Chance to correct an answer","level":"5.4","depth":1,"path":"context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.md","ref":"context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","collapsible-menu","anchors","highlight"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"collapsible-menu":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-api":{"theme":"dark","languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"yaml","name":"Yaml","default":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{}},"theme":"default","author":"Wingbot.ai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"twitter":"https://twitter.com/wingbotai"},"title":"Wingbot.ai","gitbook":"*","description":"Enterprise bot tooling"},"file":{"path":"context/HelpersForKeepingUserInContext/snippetsForContext.md","mtime":"2020-08-07T17:19:31.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-07T17:27:02.294Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

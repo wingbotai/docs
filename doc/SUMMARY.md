@@ -32,6 +32,10 @@
 ## Advanced conversations
 
 * [Slot filling](conversationPatterns/slotFilling/slotFilling.md)
+* [Keep user in dialogue](context/keepUserInContext/keepUserInContext.md)
+* [Force user to answer](context/AnswerTheQuestion/AnswerTheQuestion.md)
+* [Chance to correct an answer](context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.md)
+* [Advanced context snippets](context/HelpersForKeepingUserInContext/snippetsForContext.md)
 
 ## NLP
 
@@ -85,4 +89,3 @@
 
 * [Smalltalk conversation (freeform)](buildingABot/smalltalk.md)
 * [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)-->
->>>>>>> ffd1b4dd9f8ee54796380c13ba004d602bcec00a
