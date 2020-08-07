@@ -6,7 +6,7 @@ This feature helps you easily get needed information from users. One way to get 
 
 ![conversation direct](./image_1.png)
 
-**Example 1: Ask for information about size**
+**Example 2: Ask for information about size**
 
 ![conversation with question](./image_2.png)
 
@@ -20,7 +20,7 @@ This feature helps you easily get needed information from users. One way to get 
 
 ![intent](./image_4.png)
 
-3. **Prepare interactions**: create interactions for small/middle/big tree offers.. 
+3. **Prepare interactions**: create interactions for small/middle/big tree offers.
 
 ![prepare interactions](./image_5.png)
 
