@@ -1,9 +1,9 @@
 # Keep the user in the context
 
 The designer provides 3 layers of context:
-- [**Interaction**](##Context-of-interaction) - a group of actions which are made during the reaction of the bot.
-- [**Dialogue**](##Context-of-dialogue) - a group of interactions. Something like a folder for files
-- [**Global**](##Global-context) - the whole bot
+- [**Interaction**](#context-of-interaction) - a group of actions which are made during the reaction of the bot.
+- [**Dialogue**](#context-of-dialogue) - a group of interactions. Something like a folder for files
+- [**Global**](#global-context) - the whole bot
 
 A really important part of the context is **fallback** - the interaction, which solves situations:
 - When NLU does not understand.
@@ -12,8 +12,8 @@ A really important part of the context is **fallback** - the interaction, which 
 ## Global context
 
 This context includes whole bot's interactions.
-- More about global fallback is in the chapter of [service interactions](buildingABot/serviceInteractions/service_interactions.md).
-- How to work with interactions with NLP on input is described [here](buildingABot/faq/smalltalk_faq.md#answers-to-frequently-asked-questions-and-common-cases).
+- More about global fallback is in the chapter of [service interactions](./../../buildingABot/serviceInteractions/service_interactions.html).
+- How to work with interactions with NLP on input is described [here](./../../buildingABot/faq/smalltalk_faq.md#answers-to-frequently-asked-questions-and-common-cases.html).
 
 ## Context of dialogue
 
@@ -49,7 +49,7 @@ You can add fallback on the input of interaction by clicking on * in intent set 
 
 ## Context of interaction
 
-You can do “magic” even in the context of interaction. It's possible to force users to answer the question ( take a look at the snippet [Keep user in this interaction (use it as a fallback)](./../HelpersForKeepingUserInContext/snippetsForContext.html##snippet_keep_user_in_this_interaction_use_it_as_a_fallback)). Or you can use the context of interaction very similarly as we used before in the context of dialogue. 
+You can do “magic” even in the context of interaction. It's possible to force users to answer the question ( take a look at the snippet [Keep user in this interaction (use it as a fallback)](./../HelpersForKeepingUserInContext/snippetsForContext.html#snippet-keep-user-in-this-interaction-use-it-as-a-fallback)). Or you can use the context of interaction very similarly as we used before in the context of dialogue. 
 
 #### Example
 
@@ -72,7 +72,7 @@ There is the following **order in dispatching** a conversation event through all
 5. **Fallback in the current dialogue**
 6. **Global fallback** - in the Root dialogue
 
->The first matching rule is executed.
+The first matching rule is executed.
 
 
-> Take a look how **context snippets can help you** [here](./../HelpersForKeepingUserInContext/snippetsFonContext.html).
+> Take a look how **context snippets can help you** [here](./../HelpersForKeepingUserInContext/snippetsForContext.html).

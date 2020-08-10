@@ -33,9 +33,10 @@
 
 * [Slot filling](conversationPatterns/slotFilling/slotFilling.md)
 * [Keep user in dialogue](context/keepUserInContext/keepUserInContext.md)
+* [Advanced context snippets](context/HelpersForKeepingUserInContext/snippetsForContext.md)
 * [Force user to answer](context/AnswerTheQuestion/AnswerTheQuestion.md)
 * [Chance to correct an answer](context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.md)
-* [Advanced context snippets](context/HelpersForKeepingUserInContext/snippetsForContext.md)
+
 
 ## NLP
 

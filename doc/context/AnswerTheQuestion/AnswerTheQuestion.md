@@ -25,6 +25,6 @@ You can ignore the user's question (or other non-acceptable response) and ask po
     ![add snippet](./image_4.png)
 
 
-> You can find **more about context snippets** [here](./../HelpersForKeepingUserInContext/snippetsFonContext.html).
+> You can find **more about context snippets** [here](./../HelpersForKeepingUserInContext/snippetsForContext.html).
 
 > Take look **how contexts works** [here](./../keepUserInContext/keepUserInContext.html).

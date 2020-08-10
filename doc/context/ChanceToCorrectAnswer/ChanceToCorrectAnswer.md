@@ -18,6 +18,6 @@ We will prepare fallback for these situations by adding one snippet.
 ![add message](./image_3.png)
 
 
-> You can find **more about context snippets** [here](./../HelpersForKeepingUserInContext/snippetsFonContext.html).
+> You can find **more about context snippets** [here](./../HelpersForKeepingUserInContext/snippetsForContext.html).
 
 > Take look **how contexts works** [here](./../keepUserInContext/keepUserInContext.html).

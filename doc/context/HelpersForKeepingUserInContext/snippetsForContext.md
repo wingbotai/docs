@@ -9,13 +9,13 @@ You may know the situation when you ask a question and users don't answer - even
     - **What to use:** nothing. This set up is the default.
 2. **Use the force: Get the answer for bot's question**
     - **Situation:** you really need the answer. Example: registration form.
-    - **What to use:** Take a look at snippets [Keep user in this interaction (use it as a fallback)](#snippet_keep_user_in_this_interaction_use_it_as_a_fallback) and [Keep previous NLP handlers and fallback (repeatedly)](#snippet_keep_previous_NLP_handlers_and_fallback_repeatedly).
+    - **What to use:** Take a look at snippets [Keep user in this interaction (use it as a fallback)](#snippet-keep-user-in-this-interaction-use-it-as-a-fallback) and [Keep previous NLP handlers and fallback (repeatedly)](#snippet-keep-previous-nlp-handlers-and-fallback-repeatedly).
 3. **In the middle - between option 1. and 2.** 
     - **Situation:** Reaction to the user's question is more important if exists. Otherwise, keep the user in this interaction.
-    - **What to use:** Take a look at snippet [Respond with an intent (bookmark)](##snippet_respond_with_an_intent_bookmark).
+    - **What to use:** Take a look at snippet [Respond with an intent (bookmark)](#snippet-respond-with-an-intent-bookmark).
 4. **Respond to the user and keep in mind previous context**
     - **Situation:** You let user change the topic, but let the user correct the answer for previous question. Example: user make mistake at the answer and bot don't underestand (respond with fallback) - user can correct the answer.
-    - **What to use:**  Take a look at snippet [Keep previous NLP handlers and fallback (just once)](##snippet_Keep_previous_NLP_handlers_and_fallback_just_once).
+    - **What to use:**  Take a look at snippet [Keep previous NLP handlers and fallback (just once)](#snippet-keep-previous-nlp-handlers-and-fallback-just-once).
 
 ## Snippet: Keep user in this interaction (use it as a fallback)
 
@@ -46,7 +46,7 @@ You may know the situation when you ask a question and users don't answer - even
     - At the interaction fallback - keep NLP handlers and fallback from this interaction (they are used again)
 - The snippet is applied whenever the user gets to this point of conversation.
 
-**Take a look how to use this snippet:** [here]([here](./../AnswerTheQuestion/AnswerTheQuestion.html))
+**Take a look how to use this snippet:** [here](./../AnswerTheQuestion/AnswerTheQuestion.html)
 
 ## Snippet: Keep previous NLP handlers and fallback (just once)
 
@@ -62,7 +62,7 @@ You may know the situation when you ask a question and users don't answer - even
     - At the interaction fallback - keep NLP handlers and fallback from this interaction (they are used again).
 - This is done just once.
 
-**Take a look how to use this snippet:** [here]([here](./../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html))
+**Take a look how to use this snippet:** [here](./../ChanceToCorrectAnswer/ChanceToCorrectAnswer.html)
 
 ## Snippet: Respond with an intent (bookmark)
 
