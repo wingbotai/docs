@@ -1,12 +1,8 @@
 # Create Dialogue in Wingbot
 
-We use folders for files that have something in common. We have dialogues and interactions in chatbot terminology. Dialogues are like folders and are used for interactions that are about one topic. Dialogue can be about topic "Coffee typology" and interaction is message to user "Do you drink coffee with milk?".
+We use folders for files that have something in common. We have dialogues and interactions in chatbot terminology. Dialogues are like folders and are used for interactions that are about **one topic**. Dialogue can be about topic "Coffee typology" and interaction is message to user "Do you drink coffee with milk?".
 
-##Create basic dialogue with interaction
-
-
-    Don't forget to log in :)
-
+## Create basic dialogue with interaction
 
 1. **Add a New Dialogue**
 
@@ -46,15 +42,13 @@ We use folders for files that have something in common. We have dialogues and in
   - We will start with adding messages - click to Message button below the name of interaction 
   - We are in casual conversation so lets talk with user like with friend. We will add two messages "I love coffee so much." and "Do you drink coffee too?"
 
-  
-
   ![bot visual](../createDialogue/4.png)
 
 
-We can start conversation with user at this point. But we can not still respond to user reply
+We can start conversation with user at this point. But we can not still respond to user reply.
 
 
-##Handle user responses
+## Handle user responses
 
 We sent the message and user will response. He can just type the message and we should recognize it. We have two options in this case - we found coffee drinker or not.
 
@@ -67,14 +61,13 @@ We sent the message and user will response. He can just type the message and we 
 
 5. **Add intents to handler in interaction**
 
+  - Click on **+ detect intent**.
   - Coffee drinker will give us positive reaction. We can use "positive" to the name of intent.
   - And now we can add texts, what can user type if he is coffee drinker.
 
     > Info: Intents can be used in more interactions.
 
     > Info: You don't have to worry about interpunction or uppercase.
-
-    > Remember: User can type with mistakes.
 
   ![bot visual](../createDialogue/6.png)
 
@@ -84,7 +77,7 @@ We sent the message and user will response. He can just type the message and we 
 
   - Use "Go to" below the intents, type the name of the next interaction and click to create in dropdown.
 
-  ![bot visual](../createDialogue/7.png)
+  ![bot visual](../createDialogue/7a.png)
 
 7. **Handle user responses in interaction for negative responses**
 
