@@ -51,4 +51,4 @@
 ## Testing
 
 * [Automated conversation tests](testing/conversations/at_conversations.md)
-* [Automated NLP tests](testing/nlp/at_text.mdd)
+* [Automated NLP tests](testing/nlp/at_text.md)
