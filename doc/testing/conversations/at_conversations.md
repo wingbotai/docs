@@ -11,11 +11,11 @@ Besides that automated tests also help you with releasing new versions of your c
 
 **Technical preparation**
 
-The idea behind automated tests is to go automatically through all the interactions in the chatbot and try to simulate every path users can go through. To do this you will export all the possible paths into Google Sheet and then start an automated test in the Designer. 
+The idea behind automated tests is to go automatically through all the interactions in the chatbot and try to simulate every path users can go through. To do this you will export all the possible paths into Google Sheet and then start an automated test in the Designer.
 
 So the first step is to create a Google Sheet that you should link to your chatbot. You can download a template here. Structure will look like this:
 
-![Structure of an automated test for conversations](at_conv_1.png)
+![Structure of an automated test for conversations](./at_conv_1.png)
 
 What does all the columns mean?
 
@@ -33,21 +33,21 @@ How to connect this Google Sheet with your chatbot is mentioned in our technical
 
 As we mentioned you should follow every possible path users can take. Every path should have its own name mentioned in the Testcase.
 
-![Click through every possible path user can take](at_conv_2.gif)
+![Click through every possible path user can take](./at_conv_2.gif)
 
 In the next step, we suggest printing a diagram of your chatbot, so that you are sure that you will not forget any interaction.
 
-![Structure of an automated test for conversations](at_conv_3.png)
+![Structure of an automated test for conversations](./at_conv_3.png)
 
 Then start to walk through all the interactions in all dialogues using quick replies at first. When you walk through the interaction, make a mark on your printed diagram. Like that you won’t forget any of them.
 
 Then go to **Ads & Audience** > **Conversations**. Then find the conversation you just did and then click on **Export as test case**. This will copy the whole conversation into your clipboard. Then go back to the Google sheet you created and paste the Testcase from your clipboard.
 
-![Paste the Testcase from your clipboard](at_conv_4.gif)
+![Paste the Testcase from your clipboard](./at_conv_4.gif)
 
 After pasting, Google Sheet will look like this:
 
-![Structure of an automated test after pasting](at_conv_5.png)
+![Structure of an automated test after pasting](./at_conv_5.png)
 
 Another important thing is that if you insert a blank row, Designer will automatically skip everything that is below this blank row.
 
@@ -55,17 +55,17 @@ Another important thing is that if you insert a blank row, Designer will automat
 
 Then go back to the **Designer** > **Ads & Audience** > **Test console**. Here click on **Execute test**.
 
-![Executing a test](at_conv_6.gif)
+![Executing a test](./at_conv_6.gif)
 
 Also be sure on which snapshot you are performing the test.
 
-![Choosing the right snapshot](at_conv_7.gif)
+![Choosing the right snapshot](./at_conv_7.gif)
 
 **How to evaluate results of a test**
 
-Every test case will show after finishing as a new line. 
+Every test case will show after finishing as a new line.
 
-![Evaluating results of a test](at_conv_8.png)
+![Evaluating results of a test](./at_conv_8.png)
 
 You can encounter different types of errors:
 

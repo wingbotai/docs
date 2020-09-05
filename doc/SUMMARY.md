@@ -26,67 +26,29 @@
 
 ## Marketing and Audiences
 
-* [Building audience](buildingABot/buildingAudience/building_audience.md)
-* [Set up a Facebook ad](buildingABot/setFacebookAd/set_facebook_ad.md)
+* [Building and exporting audience](marketing/audience/creating_audience.md)
+* [Automated notifications](./marketing/notifications/Notifications.md)
+* [Set up a Facebook ad](marketing/setFacebookAd/set_facebook_ad.md)
 
 ## Advanced conversations
 
 * [Slot filling](conversationPatterns/slotFilling/slotFilling.md)
+* [Breadcrumbs](conversationPatterns/breadcrumbs/Breadcrumbs.md)
+* [Import & export](buildingABot/importexport/importexport.md)
 * [Keep user in dialogue](context/keepUserInContext/keepUserInContext.md)
 * [Advanced context snippets](context/HelpersForKeepingUserInContext/snippetsForContext.md)
 * [Force user to answer](context/AnswerTheQuestion/AnswerTheQuestion.md)
 * [Chance to correct an answer](context/ChanceToCorrectAnswer/ChanceToCorrectAnswer.md)
 
-
 ## NLP
 
 * [Basic concepts](nlp/understanding.md)
+* [Starting from scratch](nlp/starting/nlp_new_chatbot.md)
 * [Troubleshooting](nlp/troubleshooting.md)
-* [Building the training data](nlp/advancedNlp.md)
+* [Best practices](nlp/advancedNlp.md)
+* [Crossvalidation](nlp/crossvalidation/cross_validation.md)
 
-<!--
-## Update your chatbot to next level
+## Testing
 
-* Analyze chatbot
-* Friendly chatbot
-* Send campaign to users -->
-
-<!--## Wingbot features
-
-* Interactions
-    * Message
-    * Media
-    * Go to
-    * Button
-    * Carousel
-    * Subscripton
-    * Plugin
-    * Snipet
-
-* Audiences
-
-* Campaigns
-
-* NLP
-    * Intents
-        * Global intent
-        * Local intent
-        * Handler of intent
-    * Entities
-
-* Settings
-
-
-
-
-
-* [Getting Started](README.md)
-
-## Conversational patterns
-
-* [Asking an open question](conversationPatterns/openQuestions.md)
-
-
-
-* [Smalltalk conversation (freeform)](buildingABot/smalltalk.md)
-* [Advanced conversation (structured)](buildingABot/advandedConversationTree.md)-->
+* [Automated conversation tests](testing/conversations/at_conversations.md)
+* [Automated NLP tests](testing/nlp/at_text.mdd)

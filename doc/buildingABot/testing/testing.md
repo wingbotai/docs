@@ -1,30 +1,28 @@
-# Testing of chatbot
+# Testing a chatbot
 
-
-
-##Review your dialogues
+## Review your dialogues
 
   Check your dialogue tree in Diagram (link is in main menu at the top of page) :)
 
-  Switch between dialogues is at the top left corner. 
+  Switch between dialogues is at the top left corner.
 
   ![bot visual](../testing/0.png)
 
-##Testing live chatbot
+## Testing live chatbot
 
 Another way is to talk to your chatbot. You need to deploy your chatbot to testing environment. I'll show you how to do this in facebook:
 
 1. **Deploy to testing environment**
 
-  - Select testing environment in the top right corner of the page. 
-  
+  - Select testing environment in the top right corner of the page.
+
     > Deploy can take even 10 minutes, if you made big changes (or you deploy chatbot for the first time).
 
   ![bot visual](../testing/testing1.png)
 
 2. **Start to chat**
 
-  - Click to blue button. You can see him after deploy. 
+  - Click to blue button. You can see him after deploy.
   - Try to chat with your chatbot.
 
   ![bot visual](../testing/testing2.png)
@@ -35,13 +33,13 @@ Another way is to talk to your chatbot. You need to deploy your chatbot to testi
   - Follow step 1. to deploy your bot again.
 
 ##Testing the specific part of chatbot
-  
+
 You have deployed chatbot and you want to continue in testing from the last tested interaction. You can test your bot from any part of chatbot. You will need specific link for this...
 
 1. **Open link generator**
 
-  - Click to link icon at the left of the interaction name. 
-  
+  - Click to link icon at the left of the interaction name.
+
   ![bot visual](../testing/testinglink1.png)
 
 1. **Get m.me link URL**

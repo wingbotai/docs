@@ -10,11 +10,11 @@ The idea of cross-validation is that you take one-fifth of all utterances and cr
 
 Cross-validation is located in **NLP** > **NLP Validation**. Hit the button on the left side panel. Don’t be a surprise, cross-validation process could be long (10-20 minutes are quite normal).
 
-![Creating a new cross-validation report](crossvalidation_1.gif)
+![Creating a new cross-validation report](./crossvalidation_1.gif)
 
 After cross-validation is finished. The report will look like this:
 
-![How cross-validation report will look like](crossvalidation_2.gif)
+![How cross-validation report will look like](./crossvalidation_2.gif)
 
 In the first column, you can see an intent where it was expected for an utterance to fit. In the next column is an intent where this utterance falls. In the third column, you see with which confidence Designer see given utterance to fall. And in the last column, you can find the actual utterance.
 
