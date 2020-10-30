@@ -11,11 +11,11 @@ We will prepare fallback for these situations by adding one snippet.
 
 1. **Add a snippet** at the top of the fallback interaction (It can be dialog fallback or global fallback in root dialogue).
 
-![add fallback](./image_2.png)
+    ![add fallback](./image_2.png)
 
 2. Select snippet **Keep previous NLP handlers and fallback (just once)** and click to Use snippet.
 
-![add message](./image_3.png)
+    ![add message](./image_3.png)
 
 
 > You can find **more about context snippets** [here](./../HelpersForKeepingUserInContext/snippetsForContext.html).

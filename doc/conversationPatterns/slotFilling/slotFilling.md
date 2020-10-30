@@ -12,45 +12,45 @@ This feature helps you easily get needed information from users. One way to get 
 
 ## Slot filling with one parameter
 
-1. **Create an entity** with information.
+1. **Create an entity** with information
 
-![entity](./image_3.png)
+    ![entity](./image_3.png)
 
-2. **Create intent linked to the entity**.
+2. **Create intent linked to the entity**
 
-![intent](./image_4.png)
+    ![intent](./image_4.png)
 
-3. **Prepare interactions**: create interactions for small/middle/big tree offers.
+3. **Prepare interactions**: create interactions for small/middle/big tree offers
 
-![prepare interactions](./image_5.png)
+    ![prepare interactions](./image_5.png)
 
-4. **Add intent to interactions**.
+4. **Add intent to interactions**
 
-![add intent](./image_6.png)
+    ![add intent](./image_6.png)
 
-5. **Add entity to interactions**.
+5. **Add entity to interactions**
 
-![add entity](./image_7.png)
+    ![add entity](./image_7.png)
 
-6. **Set value of entity** (depends on the size of trees in interaction).
+6. **Set value of entity** (depends on the size of trees in interaction)
 
-![value of entity](./image_8.png)
+    ![value of entity](./image_8.png)
 
-7. **Create interaction** which do not get the size of a tree. small/middle/big tree offers. 
+7. **Create interaction** which do not get the size of a tree. small/middle/big tree offers
 
-![general interaction](./image_9.png)
+    ![general interaction](./image_9.png)
 
-8. **Add intent and entity to interaction**.
+8. **Add intent and entity to interaction**
 
-![add intent and entity](./image_10.png)
+    ![add intent and entity](./image_10.png)
 
-9. **Set value of entity to optional**.
+9. **Set value of entity to optional**  
 
-![optional entity](./image_11.png)
+    ![optional entity](./image_11.png)
 
-10. **Add also handlers for responses.**.
+10. **Add also handlers for responses.**
 
-![handlers for entity](./image_12.png)
+    ![handlers for entity](./image_12.png)
 
 ### Diagram of result
 
