@@ -16,8 +16,7 @@ Adventages
 [**TRY FOR FREE**](https://designer.wingbot.ai)
 
 Quick links
-- [Pricing](https://wingbot.ai/pricing/)
-- [Tech specifications](https://wingbot.ai/tech-specs/)
+- [Wingbot.ai](https://wingbot.ai/)
 - [Contact us](david.menger@wingbot.ai)
 - [Documentation for developers](https://wingbotai.github.io/wingbot/)
 - [Wingbot on GitHub](https://github.com/wingbotai)
