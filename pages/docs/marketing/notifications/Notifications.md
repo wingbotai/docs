@@ -1,18 +1,24 @@
+---
+title: Automated notifications
+section: MARKETING AND AUDIENCES
+order: 2
+---
+
 # Returning user to chatbot after some period of inactivity
 
 Sometimes designers can lose users in the procedure of their chatbot. Something might distract the user - a phone call, his children running around, a colleague asking for help. Or maybe he just doesn't have time to chat at the moment.
 
-![User got distracted](./notification_1.gif)
+![User got distracted](/notification_1.gif)
 
 There is a possibility to send one-time notification to the user in a 24-hour window after his last interaction so that you return the user where he dropped out. As it is your only possibility to contact users, this Notification conversation should be short, funny, and catchy.
 
-![Notification should be short and funny](./notification_2.gif)
+![Notification should be short and funny](/notification_2.gif)
 
 **Designing Notification dialogue**
 
 First, create new dialogue and name it Notification (but you can choose whatever name you like). Write 4 or 5 steps dialogue and at the end ask the user if he wants to continue with the process.
 
-![Ask user if he wants to continue where he left off](./notification_3.gif)
+![Ask user if he wants to continue where he left off](/notification_3.gif)
 
 > In another guide, we explained, how breadcrumbs work. So put breadcrumbs everywhere, where you might lose users and want to put him back.
 
@@ -28,7 +34,7 @@ Another very important thing is that you should target only relevant users. To e
 
 Tags can be inserted like this.
 
-![Inserting tags](./notification_5.gif)
+![Inserting tags](/notification_5.gif)
 
 Insert one tag at the second interaction (so that you are sure that you capture users that started the conversation). And second tag to the end of the conversation so that you avoid those, who finished your chatbot procedure.
 

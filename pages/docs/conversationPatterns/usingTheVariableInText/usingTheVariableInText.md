@@ -1,3 +1,9 @@
+---
+title: Using variable in bot`s response
+section: VARIABLES AND CONVERSATION STATE
+order: 2
+---
+
 # Using variable in bot`s response
 
 You can use variable value anywhere in chatbot texts by using `{{name of variable}}`. For example, when you want to tell the final score:

@@ -1,3 +1,9 @@
+---
+title: First dialogue
+section: GETTING STARTED WITH WINGBOT.AI
+order: 1
+---
+
 # Create Dialogue in Wingbot
 
 We use folders for files that have something in common. We have dialogues and interactions in chatbot terminology. Dialogues are like folders and are used for interactions that are about **one topic**. Dialogue can be about topic "Coffee typology" and interaction is message to user "Do you drink coffee with milk?".

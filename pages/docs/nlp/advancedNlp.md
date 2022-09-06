@@ -267,7 +267,3 @@ Let's have a new utterance `say hello` and the bot now does not understand it.
 
     ![matching interactions](./matching-interactions.png)
 
-
-<style>
-.hljs-attr { font-weight: bold; }
-</style>

@@ -1,3 +1,9 @@
+---
+title: Setting a variable
+section: VARIABLES AND CONVERSATION STATE
+order: 1
+---
+
 # How to set variables
 
 Wingbot designer is user friendly for basic operation with variables. You don't have to be programator to do it.

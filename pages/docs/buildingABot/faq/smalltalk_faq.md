@@ -1,3 +1,9 @@
+---
+title: Simple FAQ and smalltalk
+section: GETTING STARTED WITH WINGBOT.AI
+order: 2
+---
+
 # How to answer FAQ and react to basic phrases
 
 Important part of a chatbot is reaction to a user input even it's not in a dialogue. Common examples are: FAQ, reactions to emojis, greeting.

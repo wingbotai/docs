@@ -1,3 +1,9 @@
+---
+title: Run a testing bot
+section: GETTING STARTED WITH WINGBOT.AI
+order: 3
+---
+
 # Testing a chatbot
 
 ## Review your dialogues
