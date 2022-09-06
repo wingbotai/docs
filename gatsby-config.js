@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-    pathPrefix: '/wingbot',
+    pathPrefix: '',
     
     plugins: [
         {

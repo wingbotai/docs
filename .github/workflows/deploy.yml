@@ -39,7 +39,7 @@ jobs:
         run: cp smooth-doc-gatsby-config.js node_modules/smooth-doc/gatsby-config.js
 
       - name: Build documentation website with gatsby
-        run: cd documentation && npm run build
+        run: npm run build
       
       - name: Deploy documentation to github pages
         uses: JamesIves/github-pages-deploy-action@v4
