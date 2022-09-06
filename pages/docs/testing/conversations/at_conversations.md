@@ -1,3 +1,9 @@
+---
+title: Automated conversation tests
+section: TESTING
+order: 1
+---
+
 # Automated tests for conversations
 
 Before you publish your chatbot and send it to the world you want to be more than sure that it is working properly. Beside NLP (which you will still tune even weeks after release) and language correctness you have to be confident that all interactions are wired somewhere so that users won’t end up in a dead end. There is a feature in Designer that will help you go through all the steps of your chatbot. We call it automated tests for conversations.
@@ -33,7 +39,7 @@ How to connect this Google Sheet with your chatbot is mentioned in our technical
 
 As we mentioned you should follow every possible path users can take. Every path should have its own name mentioned in the Testcase.
 
-![Click through every possible path user can take](./at_conv_2.gif)
+![Click through every possible path user can take](/at_conv_2.gif)
 
 In the next step, we suggest printing a diagram of your chatbot, so that you are sure that you will not forget any interaction.
 
@@ -43,7 +49,7 @@ Then start to walk through all the interactions in all dialogues using quick rep
 
 Then go to **Ads & Audience** > **Conversations**. Then find the conversation you just did and then click on **Export as test case**. This will copy the whole conversation into your clipboard. Then go back to the Google sheet you created and paste the Testcase from your clipboard.
 
-![Paste the Testcase from your clipboard](./at_conv_4.gif)
+![Paste the Testcase from your clipboard](/at_conv_4.gif)
 
 After pasting, Google Sheet will look like this:
 
@@ -55,11 +61,11 @@ Another important thing is that if you insert a blank row, Designer will automat
 
 Then go back to the **Designer** > **Ads & Audience** > **Test console**. Here click on **Execute test**.
 
-![Executing a test](./at_conv_6.gif)
+![Executing a test](/at_conv_6.gif)
 
 Also be sure on which snapshot you are performing the test.
 
-![Choosing the right snapshot](./at_conv_7.gif)
+![Choosing the right snapshot](/at_conv_7.gif)
 
 **How to evaluate results of a test**
 

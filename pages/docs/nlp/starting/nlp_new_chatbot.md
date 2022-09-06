@@ -1,3 +1,9 @@
+---
+title: Starting from scratch
+section: NLP
+order: 2
+---
+
 # Best practice how to start with NLP in a new chatbot
 
 When you are starting with a new chatbot you might wonder what is the best way to start with creating intents for natural language processing (NLP).
@@ -20,7 +26,7 @@ You can do it directly in the Designer, but for the bigger picture, we suggest t
 
 After you come up with all the intents, export this table to CSV as you can import this sheet directly to Designer after.
 
-![Preparation in sheet](./nlp_new_chatbot_3.gif)
+![Preparation in sheet](/nlp_new_chatbot_3.gif)
 
 **Dealing with intent collisions**
 

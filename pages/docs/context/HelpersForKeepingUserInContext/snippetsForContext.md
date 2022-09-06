@@ -1,3 +1,9 @@
+---
+title: Advanced context snippets
+section: ADVANCED CONVERSATIONS
+order: 5
+---
+
 # Snippets for easy work with context
 
 Wingbot provides you snippets which help you work with the context in fallbacks.
@@ -19,7 +25,7 @@ You may know the situation when you ask a question and users don't answer - even
 
 ## Snippet: Keep user in this interaction (use it as a fallback)
 
-![conversation example](./image_1.gif)
+![conversation example](/image_1.gif)
 
 **Most used example: Get answer from users**
 - At the interaction fallback to keep users at the interaction. Bot can give help to users and keep them in interaction. 
@@ -66,7 +72,7 @@ You may know the situation when you ask a question and users don't answer - even
 
 ## Snippet: Respond with an intent (bookmark)
 
-![conversation example 2](./image_2.gif)
+![conversation example 2](/image_2.gif)
 
 **Most used example: offtopic with keeping context**
 - Bot reacts to oftopic question (is the bot knows the answer) and return user back to context of interaction.

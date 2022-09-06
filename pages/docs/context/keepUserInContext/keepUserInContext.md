@@ -1,3 +1,9 @@
+---
+title: Keep user in dialogue
+section: ADVANCED CONVERSATIONS
+order: 4
+---
+
 # Keep the user in the context
 
 The designer provides 3 layers of context:

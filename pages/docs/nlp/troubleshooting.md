@@ -1,3 +1,9 @@
+---
+title: Troubleshooting
+section: NLP
+order: 2
+---
+
 # Troubleshooting NLP
 
 This is the best approach to reveal most common mistakes.

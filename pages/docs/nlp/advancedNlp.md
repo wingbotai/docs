@@ -1,3 +1,9 @@
+---
+title: Best practices
+section: NLP
+order: 4
+---
+
 # Advanced NLP: training data building
 
 ## Avoid missleading intent names

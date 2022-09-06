@@ -1,3 +1,9 @@
+---
+title: Basic concepts
+section: NLP
+order: 1
+---
+
 # Understanding the concepts
 
 ## How the intent condition is evaluated

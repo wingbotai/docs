@@ -1,3 +1,9 @@
+---
+title: Set up a Facebook ad
+section: MARKETING AND AUDIENCES
+order: 3
+---
+
 # Set Chatbot to Facebook Ad
 
 This article is about how to connect existing wingbot chatbot to existing facebook ad. If you don't have chatbot yet check [how to create dialogue in wingbot](buildingABot/createDialogue/create_dialogue.md). If you don't have facebook check [Facebook insturictions](https://www.facebook.com/business/help/1361486070635113)

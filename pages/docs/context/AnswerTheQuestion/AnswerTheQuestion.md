@@ -1,8 +1,14 @@
+---
+title: Force user to answer
+section: ADVANCED CONVERSATIONS
+order: 6
+---
+
 # Force user to answer the question
 
 You can ignore the user's question (or other non-acceptable response) and ask politely him again. 
 
-![conversation direct](./image1.gif)
+![conversation direct](/image1.gif)
 
 1. Click on **“+ response fallback”** on the interaction with the question
 

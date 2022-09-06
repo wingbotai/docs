@@ -1,3 +1,9 @@
+---
+title: Automated NLP tests
+section: TESTING
+order: 2
+---
+
 # Automated NLP tests - text sheet
 
 If you are designing a chatbot and you expect that users will ask your chatbot directly (not going through some step-by-step procedure), you can test how well prepared is your NLP. You can simulate the user's behavior with another type of automated test.
@@ -21,15 +27,15 @@ As we mentioned in another part of Wingbot’s documentation, you can download a
 
 This is how should a Text List sheet look like:
 
-![Filled-in text list](./AT_text_02.gif)
+![Filled-in text list](/AT_text_02.gif)
 
 When your sheet is prepared, execute the test:
 
-![Execution of a test](./AT_text_03.gif)
+![Execution of a test](/AT_text_03.gif)
 
 Let’s look at the results:
 
-![Dealing with the results](./AT_text_04.gif)
+![Dealing with the results](/AT_text_04.gif)
 
 At first, you can see the problematic utterance, in the next column you see with which confidence NLP sees your utterance in the intent. Perceived intent is in the next column. Next to it, you can see to which interaction given utterance should have led and where it leads actually.
 

@@ -38,7 +38,7 @@ Another way is to talk to your chatbot. You need to deploy your chatbot to testi
   - Did you find a mistake? No problem, you can fix the problem in editor.
   - Follow step 1. to deploy your bot again.
 
-##Testing the specific part of chatbot
+## Testing the specific part of chatbot
 
 You have deployed chatbot and you want to continue in testing from the last tested interaction. You can test your bot from any part of chatbot. You will need specific link for this...
 
