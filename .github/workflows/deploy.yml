@@ -30,7 +30,7 @@ jobs:
           cache: 'npm'
 
       - name: Npm install
-        run: npm install && cd documentation && npm install --legacy-peer-deps && cd ..
+        run: npm install
 
       - name: Test
         run: npm run test
