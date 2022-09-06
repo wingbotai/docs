@@ -1,3 +1,4 @@
+.cache
+public
 node_modules
-doc/node_modules
-.DS_Store
+yarn.lock
