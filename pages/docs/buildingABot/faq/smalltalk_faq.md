@@ -16,7 +16,7 @@ Diagram should help you to understand better:
 - "positive" and "negative" are intents which are trigered immediately in reaction to this interaction. 
 - Why is intent "positive" used like this? The reason is that you don't want to have interaction Navigation as universal reaction to "positive" intents. The reaction for this content always depends on context. 
 
-##Answers to frequently asked questions and common cases
+## Answers to frequently asked questions and common cases
 
 ... so people don't has to be robots. This part of conversation can solve a lot of conversations, which would be usually asked to customer care (or anyone who react, when user ask for it). It hasn't be a question. User is just searching for the right way. 
 
