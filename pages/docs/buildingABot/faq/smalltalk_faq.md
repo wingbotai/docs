@@ -62,7 +62,7 @@ Our recommendation is to create new dialogue "FAQ" for there cases. So you can e
 
   - type intents which can user type to get there
 
-##Smalltalk with chatbot
+## Smalltalk with chatbot
 
 We can use intents for reaction to basic conversation. This makes your chatbot more personal and "smarter". Users often test your chatbot or they just want to talk with him as a game. And trolls will often talk to your chatbot to.
 
@@ -71,7 +71,7 @@ We use more dialogues to separate smalltalk types:
 - Emoji smalltalk - usually we use emoji for reply too
 - Text smalltalk - for example greeting, "How do you do?", "How old are you?", "Are you human?", troll's questions...
 
-###Emoji smalltalk
+### Emoji smalltalk
 
 Emojis are frequently used by messaging users in normal conversation so your chatbot should be prepared for them to. 
 
