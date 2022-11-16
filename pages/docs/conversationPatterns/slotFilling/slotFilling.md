@@ -64,6 +64,8 @@ This feature helps you easily get needed information from users. One way to get 
 
 ![handlers for entity](./image_13.png)
 
+----------------------------------
+
 ## Advanced slot filling
 
 Let's start by defining the steps of the slot filling
@@ -94,7 +96,7 @@ The plugin requires following settings
 
 ![slot filling registration](./slot-filling-register.png)
 
-> all provided **entities will be reset**, no matter they were previously filled
+> all provided **entity variables will be emptied**, no matter they were previously filled
 
 **Slot filling - continue**
 
