@@ -1,3 +1,9 @@
+---
+ title: Slot filling
+ section: ADVANCED CONVERSATIONS
+ order: 1
+ ---
+
 # Slot filling
 
 This feature helps you easily get needed information from users. One way to get information is to ask the user little by little. The second way is that the user can type the information at once. All you need to do is have **information in the entity** and you can solve both situations easily.
@@ -109,7 +115,7 @@ The only requirement for a question interaction is, it **has to call "Slot filli
 
 > the best way to store the entity value is using of **entity handlers** by quick replies
 
-![slot filling registration](./slot-filling-question.png)
+![slot filling question](./slot-filling-register.png)
 
 > It's easy to skip a required entity by using a goto action at the beginning of the "question interaction".
 
@@ -120,7 +126,7 @@ How to validate the entity
 - **entity was valid**: just stop replying (or don't send anything) - the slot filling will continue automatically
 - **entity is invalid**: send a message with handlers (or quick replies) - when user fixes the value, just call "continue" plugin
 
-![slot filling registration](./slot-filling-validation.png)
+![slot filling validation](./slot-filling-validation.png)
 
 How the slot loading decides, whether the entity was valid or not
 
