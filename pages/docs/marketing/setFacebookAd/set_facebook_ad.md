@@ -9,7 +9,7 @@ order: 3
 This article is about how to connect existing wingbot chatbot to existing facebook ad. If you don't have chatbot yet check [how to create dialogue in wingbot](buildingABot/createDialogue/create_dialogue.md). If you don't have facebook check [Facebook insturictions](https://www.facebook.com/business/help/1361486070635113)
 
 
-##Prepare first interaction at Facebook ad
+## Prepare first interaction at Facebook ad
 
 This interaction will be shown to user as first message. User has to respond to it. The simplest way is to give him some quick replies. Don't close the window with this ad, we will use it later.
 

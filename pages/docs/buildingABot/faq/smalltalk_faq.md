@@ -113,7 +113,7 @@ Emojis are frequently used by messaging users in normal conversation so your cha
 
   > **Adding emoji on Mac with touch bar:** Position the cursor in any text field you'd like to insert an emoji. You can use touch bar to add smiles
 
-###Text Smalltalk
+### Text Smalltalk
 
 The goal is to respond user as many times as possible. The easiest way is to choose the most used phrases and react to them.
 

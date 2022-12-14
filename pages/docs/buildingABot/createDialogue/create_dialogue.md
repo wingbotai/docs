@@ -92,7 +92,7 @@ We sent the message and user will response. He can just type the message and we 
   ![bot visual](../createDialogue/8.png)
 
 
-##Quick replies of user
+## Quick replies of user
 
 Quick replies provides user a reaction without typing. Reactions are prepared for user and he can easily reply by clicking on them.
 
@@ -129,7 +129,7 @@ Example of quick replies:
 
 Tadaaa! We just learned principles of building conversation.
 
-##Diagram
+## Diagram
 
 Check your dialogue tree in Diagram (link is in main menu at the top of page) :)
 
