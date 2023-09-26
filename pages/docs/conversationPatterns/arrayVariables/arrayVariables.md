@@ -100,6 +100,20 @@ Wingbot.ai also supports array as variables.
   "varName": ["Foo"]
   ```
 
+- **input text** - `[...] set | {{$input}}`
+
+  **users message:** `hello!`
+  ```
+  "varName": ["Hello"]
+  ```
+
+- **text of quick reply** - `[...] set | {{$this}}` - works only inside a quick reply
+
+  **quick reply:** `(Show me more!)`
+  ```
+  "varName": ["Show me more!"]
+  ```
+
 - **other arrays** - `[...] set | {{someVar}}`
   ```
   "someVar": ["Foo", "Bar"]
@@ -168,7 +182,7 @@ Let's have an array like this
   *message input*
 
   ```
-  {{varName.0}}
+  {{varName.[0]}}
   ```
 
   *output*
@@ -192,6 +206,12 @@ Let's have an array like this
 
 ## Example - ask for list of emails
 
-![Alt text](image.png)
+![Designer](image.png)
 
 ![Get list of emails](<emailList.png>)
+
+## Example - messages sequence
+
+![Designer](image-2.png)
+
+![Chat](image-1.png)
