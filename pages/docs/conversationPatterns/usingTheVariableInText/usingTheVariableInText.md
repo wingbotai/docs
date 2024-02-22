@@ -42,7 +42,7 @@ Example 2
 - Result is: **You don't have a point yet. 😔**
 
 ## Advanced: Iterating through array of values
-Variable type arrays or specific objects can have more values than one. You may need to iterate them to get whore result. In this case `{{#each}}` syntax will help you. Documentation is [there](https://handlebarsjs.com/guide/builtin-helpers.html#each).
+Variable type arrays or specific objects can have more values than one. You may need to iterate them to get whole result. In this case `{{#each}}` syntax will help you. Documentation is [there](https://handlebarsjs.com/guide/builtin-helpers.html#each).
 
 Examples: text in designer `Values are:{{#each myArray}}  {{myValue}} 🙂,{{/each}}`
 
