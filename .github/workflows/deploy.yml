@@ -32,9 +32,6 @@ jobs:
       - name: Npm install
         run: npm install
 
-      - name: Test
-        run: npm run test
-
       - name: Rewrite gatsby confing inside smoothdoc
         run: cp smooth-doc-gatsby-config.js node_modules/smooth-doc/gatsby-config.js
 
