@@ -42,11 +42,15 @@
 
 ## NLP
 
-* [Basic concepts](nlp/understanding.md)
+* [Basic NLP concepts](nlp/understanding.md)
 * [Starting from scratch](nlp/starting/nlp_new_chatbot.md)
 * [Troubleshooting](nlp/troubleshooting.md)
 * [Best practices](nlp/advancedNlp.md)
 * [Crossvalidation](nlp/crossvalidation/cross_validation.md)
+
+## LLM
+
+* [Basic LLM concepts](llm/basicLLM.md)
 
 ## Testing
 

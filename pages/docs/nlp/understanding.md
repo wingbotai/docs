@@ -1,5 +1,5 @@
 ---
-title: Basic concepts
+title: Basic NLP concepts
 section: NLP
 order: 1
 ---

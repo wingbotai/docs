@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
     pathPrefix: '',
-    
+
     plugins: [
         {
             resolve: 'smooth-doc',
@@ -9,10 +9,10 @@ module.exports = {
                 name: 'Wingbot Chatbot Framework Documentation',
                 description: 'Wingbot Chatbot Framework Documentation',
                 siteUrl: 'https://wingbotai.github.io/',
-                sections: ['GETTING STARTED WITH CHATBOTS', 'GETTING STARTED WITH WINGBOT.AI', 'VARIABLES AND CONVERSATION STATE', 'MARKETING AND AUDIENCES', 'ADVANCED CONVERSATIONS', 'NLP', 'TESTING'],
+                sections: ['GETTING STARTED WITH CHATBOTS', 'GETTING STARTED WITH WINGBOT.AI', 'VARIABLES AND CONVERSATION STATE', 'MARKETING AND AUDIENCES', 'ADVANCED CONVERSATIONS', 'LLM', 'NLP', 'TESTING'],
                 githubRepositoryURL: 'https://github.com/wingbotai/wingbot'
             }
         },
-       
+
     ]
 };
