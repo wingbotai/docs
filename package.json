@@ -20,5 +20,9 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "smooth-doc": "^9.0.0"
-  }
+  },
+  "engines": {
+    "npm": ">=11.10.0"
+  },
+  "packageManager": "npm@11.10.0"
 }
